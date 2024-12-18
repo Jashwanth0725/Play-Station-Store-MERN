@@ -1,0 +1,43 @@
+
+.Header{
+    height: 60px;
+    display:flex;
+    /* flex:1; */
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    position: sticky;
+    top:0;
+    z-index:100;
+    border-bottom: 1px solid darkblue;
+}
+.Logo{
+    width:auto;
+    height: auto;
+    overflow: hidden;
+    margin: 0 20px;
+    margin-top: 7px;
+}
+.Logo img{
+    width:auto;
+    height:27px;
+}
+.Search{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Left-side{
+    margin-right: auto;
+    
+}
+.Right-side{
+    width:200px;
+    margin-right: 5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
