@@ -1,0 +1,26 @@
+/* .img{
+    background-size: 100% 100%;
+    background-image: no-repeat;
+    animation: slider 3s linear infinite;
+}
+
+@keyframes slider {
+    0%{background-image: url(../images/ps.jpg);}
+    30%{background-image: url(../images/ps2.jpg);}
+    60%{background-image: url(../images/ps3.jpg);}
+    100%{background-image: url(../images/ps4.jpeg);}
+} */
+
+.Home{
+    margin-top: 1px;
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content:center ;
+}
+.Home img{
+    object-fit: cover;
+    width: 90%;
+    box-shadow: 20px 20px 20px gray;
+}
+

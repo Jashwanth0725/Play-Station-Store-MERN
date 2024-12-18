@@ -23,7 +23,15 @@ function Header() {
             <div className='Login'>
                 <a href=''>Login</a>
             </div>
+            <div className='Cart'>
+                <a href=''>
                 <ShoppingBagOutlinedIcon className='Cart'/>
+                </a>
+                <span>
+                    <p>0</p>
+                </span>
+            </div>
+                
         </div>
         
     </div>

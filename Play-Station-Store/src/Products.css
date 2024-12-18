@@ -1,0 +1,21 @@
+.Products{
+    margin-top: 30px;
+    padding: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Best-seller a, .Games a, .Console a, .Accessories a{
+    padding:10px;
+    border:1.5px solid  rgb(0, 112, 209) ;
+    border-radius: 20px;
+    font-style:italic;   
+}
+
+.Best-seller a:hover, .Games a:hover, .Console a:hover, .Accessories a:hover{
+    background-color: rgb(60, 162, 252);
+    color:white;
+}
