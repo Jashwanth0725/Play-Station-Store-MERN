@@ -5,27 +5,27 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
 function Header() {
   return (
-    <div className='Header'>
-        <div className='Left-side'>
-            <div className='Logo'>
+    <nav className='header'>
+        <div className='leftSide'>
+            <div className='logo'>
                 <a href='' >
                 <img src='../../images/logo.png' alt='logo'></img>
                 </a>
             </div>
         </div>
         
-        <div className='Right-side'>
-            <div className='Search'>
+        <div className='rightSide'>
+            <div className='search'>
                 {/* <input type='text' placeholder='Search...'></input> */}
-                <SearchIcon className='Search=logo'/>
+                <SearchIcon className='searchLogo'/>
             </div>
             
-            <div className='Login'>
+            <div className='login'>
                 <a href=''>Login</a>
             </div>
-            <div className='Cart'>
+            <div className='cart'>
                 <a href=''>
-                <ShoppingBagOutlinedIcon className='Cart'/>
+                <ShoppingBagOutlinedIcon className='cartIcon'/>
                 </a>
                 <span>
                     <p>0</p>
@@ -34,7 +34,7 @@ function Header() {
                 
         </div>
         
-    </div>
+    </nav>
   )
 }
 

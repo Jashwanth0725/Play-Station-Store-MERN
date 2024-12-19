@@ -11,14 +11,15 @@
     100%{background-image: url(../images/ps4.jpeg);}
 } */
 
-.Home{
-    margin-top: 1px;
+.home{
+    margin-top: 5px;
     display: flex;
     flex:1;
     flex-direction: row;
     justify-content:center ;
+    /* z-index: 1000px; */
 }
-.Home img{
+.home img{
     object-fit: cover;
     width: 90%;
     box-shadow: 20px 20px 20px gray;

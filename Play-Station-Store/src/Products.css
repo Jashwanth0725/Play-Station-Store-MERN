@@ -1,21 +1,63 @@
-.Products{
+.section{
     margin-top: 30px;
     padding: 20px;
+    /* width: 100%; */
     display:flex;
+    /* flex:1; */
+    flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     justify-content: space-evenly;
 }
 
-.Best-seller a, .Games a, .Console a, .Accessories a{
+.bestSeller a,.games a,.console a,.accessories a{
     padding:10px;
-    border:1.5px solid  rgb(0, 112, 209) ;
+    /* border:1.5px solid  rgb(0, 112, 209) ; */
     border-radius: 20px;
     font-style:italic;   
+    
 }
 
-.Best-seller a:hover, .Games a:hover, .Console a:hover, .Accessories a:hover{
+.bestSeller a{
     background-color: rgb(60, 162, 252);
     color:white;
+    display: flex;
+    flex-direction: wrap;
+}
+
+.productItems{
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:25px;
+    /* max-width: 400px; */
+}
+.productItems img{
+    display: flex;
+    flex-direction: row;
+    max-width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap:5px;
+}
+
+.addToCart{
+    
+    color:white;
+    border-radius: 5px;
+    border:1px solid  rgb(60, 162, 252);
+    background-color: rgb(60, 162, 252);
+    width: 100px;
 }
