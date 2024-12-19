@@ -35,38 +35,30 @@ function Home() {
         />
         <Products
           id={1234567}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
+          image="../images/product2.png"
+          name="The Last Of Us 2"
           price={3000}
           stars={4}
           review={27}
         />
         <Products
           id={12345678}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
+          image="../images/product3.jpg"
+          name="Wu Kong"
           price={3000}
           stars={2}
           review={27}
         />
         <Products
           id={123456789}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
+          image="../images/product4.jpg"
+          name="Play Station"
           price={3000}
           stars={1}
           review={27}
         />
         <Products
-          id={1234567890}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
-          price={3000}
-          stars={1}
-          review={27}
-        />
-        <Products
-          id={12345}
+          id={123456}
           image="../images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
@@ -74,35 +66,35 @@ function Home() {
           review={27}
         />
         <Products
-          id={1234}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
+          id={1234567}
+          image="../images/product2.png"
+          name="The Last Of Us 2"
+          price={3000}
+          stars={4}
+          review={27}
+        />
+        <Products
+          id={12345678}
+          image="../images/product3.jpg"
+          name="Wu Kong"
+          price={3000}
+          stars={2}
+          review={27}
+        />
+        <Products
+          id={123456789}
+          image="../images/product4.jpg"
+          name="Play Station"
           price={3000}
           stars={1}
           review={27}
         />
         <Products
-          id={123}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
+          id={12345678}
+          image="../images/product3.jpg"
+          name="Wu Kong"
           price={3000}
-          stars={1}
-          review={27}
-        />
-        <Products
-          id={12}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
-          price={3000}
-          stars={1}
-          review={27}
-        />
-        <Products
-          id={1}
-          image="../images/product1.jpg"
-          name="God Of War: Ragnarok"
-          price={3000}
-          stars={1}
+          stars={2}
           review={27}
         />
       </div>

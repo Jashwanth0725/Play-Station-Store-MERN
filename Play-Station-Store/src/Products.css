@@ -47,8 +47,26 @@
   flex-direction: wrap;
   align-items: end;
 }
+.productStar {
+  gap: 2px;
+}
 
 .productPrice small,
 .productPrice strong {
   padding: 2px;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.addMark {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(88, 198, 88);
 }

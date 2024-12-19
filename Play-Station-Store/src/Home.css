@@ -1,5 +1,5 @@
 .home {
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .image {
@@ -21,6 +21,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  /* z-index: 1; */
 }
 
 .bestSeller a,
@@ -39,12 +40,13 @@
   flex-direction: wrap;
 }
 .products {
-  margin: 10px 30px;
+  padding: 15px 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-evenly;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
+  /* border: 1.3px solid rgb(60, 162, 252); */
 }

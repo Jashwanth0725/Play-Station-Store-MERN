@@ -1,5 +1,6 @@
 import React from "react";
 import "./Products.css";
+import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 
 function Products({ id, name, image, price, stars, review }) {
   return (
@@ -29,8 +30,13 @@ function Products({ id, name, image, price, stars, review }) {
             <small>₹</small>
             <strong>{price}</strong>
           </div>
-
-          <button className="addToCart">Add To Cart</button>
+          <div className="add">
+            <button className="addToCart">Add To Cart</button>
+            <span className="addMark">
+              <VerifiedRoundedIcon />
+              <p>Added</p>
+            </span>
+          </div>
         </div>
       </div>
     </div>
