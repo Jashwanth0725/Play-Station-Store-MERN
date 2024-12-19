@@ -1,66 +1,56 @@
-.section{
-    margin-top: 30px;
-    padding: 20px;
-    /* width: 100%; */
-    display:flex;
-    /* flex:1; */
-    flex-wrap: nowrap;
-    flex-direction: row;
-    /* justify-content: center; */
-    align-items: center;
-    justify-content: space-evenly;
+/* .productItems {
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+} */
+
+.productItems img {
+  display: flex;
+  flex-direction: row;
+  max-width: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px gray;
 }
 
-.bestSeller a,.games a,.console a,.accessories a{
-    padding:10px;
-    /* border:1.5px solid  rgb(0, 112, 209) ; */
-    border-radius: 20px;
-    font-style:italic;   
-    
+.product:hover {
+  cursor: pointer;
 }
 
-.bestSeller a{
-    background-color: rgb(60, 162, 252);
-    color:white;
-    display: flex;
-    flex-direction: wrap;
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
 }
 
-.productItems{
-    margin: 20px 30px;
-    /* padding :20px 0; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    gap:25px;
-    /* max-width: 400px; */
-    /* border-bottom: 1px solid rgb(60, 162, 252) ; */
-}
-.productItems img{
-    display: flex;
-    flex-direction: row;
-    max-width: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+.productImage {
+  margin-bottom: 10px;
 }
 
-.product{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    gap:5px;
+.addToCart {
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  border: 1px solid rgb(60, 162, 252);
+  background-color: rgb(60, 162, 252);
+  width: 90px;
 }
 
-.addToCart{
-    
-    color:white;
-    border-radius: 15px;
-    padding: 5px;
-    border:1px solid  rgb(60, 162, 252);
-    background-color: rgb(60, 162, 252);
-    width: 90px;
+.productStar,
+.stars {
+  display: flex;
+  flex-direction: row;
+  flex-direction: wrap;
+  align-items: end;
+}
+
+.productPrice small,
+.productPrice strong {
+  padding: 2px;
 }

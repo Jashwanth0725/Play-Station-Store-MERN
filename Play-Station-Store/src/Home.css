@@ -1,27 +1,50 @@
-/* .img{
-    background-size: 100% 100%;
-    background-image: no-repeat;
-    animation: slider 3s linear infinite;
+.home {
+  margin-top: 5px;
 }
 
-@keyframes slider {
-    0%{background-image: url(../images/ps.jpg);}
-    30%{background-image: url(../images/ps2.jpg);}
-    60%{background-image: url(../images/ps3.jpg);}
-    100%{background-image: url(../images/ps4.jpeg);}
-} */
-
-.home{
-    margin-top: 5px;
-    display: flex;
-    flex:1;
-    flex-direction: row;
-    justify-content:center ;
-    /* z-index: 1000px; */
-}
-.home img{
-    object-fit: cover;
-    width: 90%;
-    box-shadow: 20px 20px 20px gray;
+.image {
+  display: flex;
+  justify-content: center;
 }
 
+.home img {
+  object-fit: cover;
+  width: 90%;
+  box-shadow: 20px 20px 20px gray;
+}
+
+.section {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bestSeller a,
+.games a,
+.console a,
+.accessories a {
+  padding: 10px;
+  border-radius: 20px;
+  font-style: italic;
+}
+
+.bestSeller a {
+  background-color: rgb(60, 162, 252);
+  color: white;
+  display: flex;
+  flex-direction: wrap;
+}
+.products {
+  margin: 10px 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+}

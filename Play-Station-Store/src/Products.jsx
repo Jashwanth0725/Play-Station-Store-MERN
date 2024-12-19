@@ -1,220 +1,40 @@
-import React from 'react'
-import './Products.css'
+import React from "react";
+import "./Products.css";
 
-function Products() {
+function Products({ id, name, image, price, stars, review }) {
   return (
-    <div className='products'>
-        <div className='section'>
-            <div className='bestSeller'>
-                <a href=''>Best Seller</a>
-            </div>
-            <div className='console'>
-                <a href=''>Console</a>
-            </div>
-            <div className='games'>
-                <a href=''>Games</a>
-            </div> 
-            <div className='accessories'>
-                <a href=''>Accessories</a>
-            </div>
+    <div className="products">
+      <div className="productItems">
+        <div className="product">
+          <div className="productImage">
+            <img src={image} alt="Product Image"></img>
+          </div>
+
+          <div className="productName" data-id={id}>
+            <p>{name}</p>
+          </div>
+
+          <div className="productStar">
+            <span className="stars">
+              {Array(stars)
+                .fill()
+                .map((_, i) => (
+                  <p key={i}>⭐</p>
+                ))}
+            </span>
+            <span>{review}</span>
+          </div>
+
+          <div className="productPrice">
+            <small>₹</small>
+            <strong>{price}</strong>
+          </div>
+
+          <button className="addToCart">Add To Cart</button>
         </div>
-
-        <div className='productItems'>
-            <div className='product'>
-                <div className='productImage'>
-                <img src='../images/product1.jpg' alt='product1'></img>
-                </div>
-                <div className='productName'>
-                    <p>God Of War: Ragnarok</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐⭐⭐⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product2.png' alt='product2'></img>
-                </div>
-                <div className='productName'>
-                    <p>The Last Of Us 2</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product3.jpg' alt='product3'></img>
-                </div>
-                <div className='productName'>
-                    <p>Wu Kong</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product4.jpg' alt='product4'></img>
-                </div>
-                <div className='productName'>
-                    <p>PlaySation</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 55000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-            <div className='product'>
-                <div className='productImage'>
-                    <img src='../images/product4.jpg' alt='product4'></img>
-                    </div>
-                    <div className='productName'>
-                        <p>PlaySation</p>
-                    </div>
-                    <div className='productPrice'>
-                        <p>₹ 55000</p>
-                    </div>
-                    <div className='productStar'>
-                        <span>⭐</span><span>27</span>
-                    </div>
-                    <button className='addToCart'>Add To Cart</button>
-                </div>
-             
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product3.jpg' alt='product3'></img>
-                </div>
-                <div className='productName'>
-                    <p>Wu Kong</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product2.png' alt='product2'></img>
-                </div>
-                <div className='productName'>
-                    <p>The Last Of Us 2</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-                <div className='productImage'>
-                <img src='../images/product1.jpg' alt='product1'></img>
-                </div>
-                <div className='productName'>
-                    <p>God Of War: Ragnarok</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐⭐⭐⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product2.png' alt='product2'></img>
-                </div>
-                <div className='productName'>
-                    <p>The Last Of Us 2</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product3.jpg' alt='product3'></img>
-                </div>
-                <div className='productName'>
-                    <p>Wu Kong</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product4.jpg' alt='product4'></img>
-                </div>
-                <div className='productName'>
-                    <p>PlaySation</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 55000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product2.png' alt='product2'></img>
-                </div>
-                <div className='productName'>
-                    <p>The Last Of Us 2</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-        </div>
+      </div>
     </div>
-
-  )
+  );
 }
 
-export default Products
+export default Products;
