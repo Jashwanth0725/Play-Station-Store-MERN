@@ -10,8 +10,6 @@
 } */
 
 .productItems img {
-  display: flex;
-  flex-direction: row;
   max-width: 150px;
   object-fit: cover;
   border-radius: 10px;

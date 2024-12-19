@@ -1,14 +1,11 @@
-.app{
-    /* border:2px solid rgb(79, 79, 180);
+.app {
+  /* border:2px solid rgb(79, 79, 180);
      */
-     margin: 0px;
-     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  margin: 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 88.4vh;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
-
-button{
-    cursor: pointer;
+a {
+  text-decoration: none;
+  color: black;
 }
