@@ -27,7 +27,8 @@
 }
 
 .productItems{
-    margin: 10px 30px;
+    margin: 20px 30px;
+    /* padding :20px 0; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,6 +37,7 @@
     align-items: center;
     gap:25px;
     /* max-width: 400px; */
+    /* border-bottom: 1px solid rgb(60, 162, 252) ; */
 }
 .productItems img{
     display: flex;
@@ -56,8 +58,9 @@
 .addToCart{
     
     color:white;
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 5px;
     border:1px solid  rgb(60, 162, 252);
     background-color: rgb(60, 162, 252);
-    width: 100px;
+    width: 90px;
 }

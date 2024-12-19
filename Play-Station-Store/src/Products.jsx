@@ -195,7 +195,7 @@ function Products() {
                 </div>
                 <button className='addToCart'>Add To Cart</button>
             </div>
-            
+
             <div className='product'>
             <div className='productImage'>
                 <img src='../images/product2.png' alt='product2'></img>
@@ -211,40 +211,6 @@ function Products() {
                 </div>
                 <button className='addToCart'>Add To Cart</button>
             </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product3.jpg' alt='product3'></img>
-                </div>
-                <div className='productName'>
-                    <p>Wu Kong</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 3000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-            </div>
-
-            <div className='product'>
-            <div className='productImage'>
-                <img src='../images/product4.jpg' alt='product4'></img>
-                </div>
-                <div className='productName'>
-                    <p>PlaySation</p>
-                </div>
-                <div className='productPrice'>
-                    <p>₹ 55000</p>
-                </div>
-                <div className='productStar'>
-                    <span>⭐</span><span>27</span>
-                </div>
-                <button className='addToCart'>Add To Cart</button>
-
-            </div>
-            
         </div>
     </div>
 
