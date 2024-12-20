@@ -1,10 +1,10 @@
 import React from "react";
-import "/src/assets/styles/Products.css";
+import "/src/assets/styles/ProductHome.css";
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 
-function Products({ id, name, image, price, stars, review }) {
+function ProductHome({ id, name, image, price, stars, review }) {
   return (
-    <div className="products">
+    <div className="productHome">
       <div className="productItems">
         <div className="product">
           <div className="productImage">
@@ -43,4 +43,4 @@ function Products({ id, name, image, price, stars, review }) {
   );
 }
 
-export default Products;
+export default ProductHome;

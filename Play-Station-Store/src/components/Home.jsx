@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/Home.css";
-import Products from "../features/ProductDetails/Products.jsx";
+import ProductHome from "../features/ProductDetails/ProductHome.jsx";
 
 function Home() {
   return (
@@ -25,7 +25,7 @@ function Home() {
       </div>
 
       <div className="products">
-        <Products
+        <ProductHome
           id={123456}
           image="../src/assets/images/product1.jpg"
           name="God Of War: Ragnarok"
@@ -33,7 +33,7 @@ function Home() {
           stars={5}
           review={27}
         />
-        <Products
+        <ProductHome
           id={1234567}
           image="../src/assets/images/product2.png"
           name="The Last Of Us 2"
@@ -41,7 +41,7 @@ function Home() {
           stars={4}
           review={27}
         />
-        <Products
+        <ProductHome
           id={12345678}
           image="../src/assets/images/product3.jpg"
           name="Wu Kong"
@@ -49,7 +49,7 @@ function Home() {
           stars={2}
           review={27}
         />
-        <Products
+        <ProductHome
           id={123456789}
           image="../src/assets/images/product4.jpg"
           name="Play Station"
@@ -57,7 +57,7 @@ function Home() {
           stars={1}
           review={27}
         />
-        <Products
+        <ProductHome
           id={123456}
           image="../src/assets/images/product1.jpg"
           name="God Of War: Ragnarok"
@@ -65,7 +65,7 @@ function Home() {
           stars={5}
           review={27}
         />
-        <Products
+        <ProductHome
           id={1234567}
           image="../src/assets/images/product2.png"
           name="The Last Of Us 2"
@@ -73,7 +73,7 @@ function Home() {
           stars={4}
           review={27}
         />
-        <Products
+        <ProductHome
           id={12345678}
           image="../src/assets/images/product3.jpg"
           name="Wu Kong"
@@ -81,7 +81,7 @@ function Home() {
           stars={2}
           review={27}
         />
-        <Products
+        <ProductHome
           id={123456789}
           image="../src/assets/images/product4.jpg"
           name="Play Station"
@@ -89,7 +89,7 @@ function Home() {
           stars={1}
           review={27}
         />
-        <Products
+        <ProductHome
           id={12345678}
           image="../src/assets/images/product3.jpg"
           name="Wu Kong"
@@ -97,7 +97,7 @@ function Home() {
           stars={2}
           review={27}
         />
-        <Products
+        <ProductHome
           id={1234567}
           image="../src/assets/images/product2.png"
           name="The Last Of Us 2"

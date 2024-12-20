@@ -1,1 +1,57 @@
+.subTotal {
+  /* margin-top: 50px; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* border: 2px solid rgb(60, 162, 252); */
+  border-radius: 10px;
+  width: auto;
+}
 
+.subTotalHeader {
+  gap: 20px;
+}
+
+.gift,
+.free,
+.fast,
+.express {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.totalSummary,
+.delivery-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.total h2 {
+  color: rgb(88, 198, 88);
+}
+.delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.delivery span {
+  color: rgb(88, 198, 88);
+}
+
+@media (max-width: 886px) {
+  .subTotal {
+    margin-top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+  }
+}

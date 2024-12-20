@@ -1,13 +1,13 @@
-/* .productItems {
-  margin: 20px 30px;
+.productHome {
+  padding: 15px 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   justify-content: space-evenly;
   align-items: center;
-  gap: 25px;
-} */
+  /* border: 1.3px solid rgb(60, 162, 252); */
+}
 
 .productItems img {
   max-width: 150px;
