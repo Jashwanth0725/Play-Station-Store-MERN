@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "../assets/styles/Footer.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ function Footer() {
         </Link>
       </div>
       <div className="lastLogo">
-        <img src="../Images/psButtonLogo.png" alt=" button logo"></img>
+        <img src="../src/assets/images/FooterLogo.png" alt=" button logo"></img>
         <p>@Copyright 2003</p>
       </div>
     </div>

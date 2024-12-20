@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "../assets/styles/Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ function Header() {
       <div className="leftSide">
         <div className="logo">
           <Link to="./">
-            <img src="../../images/logo.png" alt="logo"></img>
+            <img src="../src/assets/images/HeaderLogo.png" alt="logo"></img>
           </Link>
         </div>
       </div>

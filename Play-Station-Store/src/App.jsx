@@ -1,11 +1,11 @@
-import Header from "./Header";
-import Home from "./Home";
-import Footer from "./Footer";
-import Checkout from "./Checkout";
-import Subtotal from "./Subtotal";
+import Header from "./components/Header.jsx";
+import Home from "./components/Home.jsx";
+import Footer from "./components/Footer.jsx";
+import Checkout from "./components/Checkout.jsx";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./App.css";
+import "./assets/styles/App.css";
 
 function App() {
   return (

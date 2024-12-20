@@ -1,6 +1,6 @@
 import React from "react";
-import "./Subtotal.css";
-import CurrencyFormat from "./CurrencyFormat";
+import "../assets/styles/Subtotal.css";
+import CurrencyFormat from "../utils/CurrencyFormat.jsx";
 
 function Subtotal() {
   return (

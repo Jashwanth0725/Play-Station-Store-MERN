@@ -1,5 +1,5 @@
 import React from "react";
-import "./Products.css";
+import "/src/assets/styles/Products.css";
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 
 function Products({ id, name, image, price, stars, review }) {

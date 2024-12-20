@@ -1,7 +1,7 @@
 import React from "react";
-import "./Checkout.css";
-import Products from "./Products";
-import Subtotal from "./Subtotal";
+import "../assets/styles/Checkout.css";
+import Products from "../features/ProductDetails/Products.jsx";
+import Subtotal from "../components/Subtotal.jsx";
 
 function Checkout() {
   return (
@@ -10,7 +10,7 @@ function Checkout() {
         <h2>Cart</h2>
         <Products
           id={123456}
-          image="../images/product1.jpg"
+          image="../src/assets/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
         />
