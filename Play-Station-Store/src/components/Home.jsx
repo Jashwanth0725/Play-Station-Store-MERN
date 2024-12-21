@@ -25,14 +25,15 @@ function Home() {
       </div>
 
       <div className="products">
-        <ProductHome
+        {/* <ProductHome
           id={123456}
           image="../src/assets/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
           stars={5}
           review={27}
-        />
+        /> */}
+
         <ProductHome
           id={1234567}
           image="../src/assets/images/product2.png"
@@ -65,6 +66,7 @@ function Home() {
           stars={5}
           review={27}
         />
+
         <ProductHome
           id={1234567}
           image="../src/assets/images/product2.png"

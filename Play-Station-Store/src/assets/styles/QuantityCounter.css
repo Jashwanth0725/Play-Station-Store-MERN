@@ -1,0 +1,19 @@
+.quantityCounter {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  border-radius: 10px;
+  gap: 7px;
+  border: 1.2px solid rgb(60, 162, 252);
+}
+
+.quantityCounter > button {
+  border-radius: 8px;
+  padding: 3px 9px;
+  border: 1px solid white;
+  background-color: white;
+  object-fit: contain;
+  font-size: 1.2em;
+}

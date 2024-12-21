@@ -1,5 +1,9 @@
 .home {
   margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .image {
@@ -21,6 +25,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  /* justify-content: center; */
   /* z-index: 1; */
 }
 
@@ -40,12 +45,12 @@
   flex-direction: wrap;
 }
 .products {
-  padding: 15px 30px;
+  padding: 15px 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  /* border: 1px solid rgb(60, 162, 252); */
 }

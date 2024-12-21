@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import "/src/assets/styles/QuantityCounter.css";
 
 function QuantityCounter() {
   const [count, setCount] = useState(0);
@@ -9,14 +10,16 @@ function QuantityCounter() {
   }
 
   function Decrement() {
-    if (count === 0) console.log("Can't decrement below 0");
+    if (count === 0) console.log("Remove Item");
     setCount((precount) => precount - 1);
   }
   return (
     <>
-      <button onClick={Decrement}>-</button>
-      <span>{count}</span>
-      <button onClick={Increment}>+</button>
+      <div className="quantityCounter">
+        <button onClick={Decrement}>-</button>
+        <span>{count}</span>
+        <button onClick={Increment}>+</button>
+      </div>
     </>
   );
 }
