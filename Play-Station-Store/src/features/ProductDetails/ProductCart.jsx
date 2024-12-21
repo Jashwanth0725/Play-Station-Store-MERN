@@ -1,5 +1,6 @@
 import React from "react";
 import "/src/assets/styles/ProductCart.css";
+import QuantityCounter from "/src/components/QuantityCounter.jsx";
 
 function ProductCart({ id, name, image, price }) {
   return (
@@ -17,19 +18,8 @@ function ProductCart({ id, name, image, price }) {
           <strong>{price}</strong>
         </div>
         <div className="productUpdate">
-          <div className="quantity">
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="1">6</option>
-              <option value="2">7</option>
-              <option value="3">8</option>
-              <option value="4">9</option>
-              <option value="5">10</option>
-            </select>
+          <div className="quantityCounter">
+            <QuantityCounter />
           </div>
 
           <div className="removeButton">

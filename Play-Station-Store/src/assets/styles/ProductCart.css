@@ -24,10 +24,6 @@
   box-shadow: 10px 10px 5px gray;
 }
 
-.productCart:hover {
-  cursor: pointer;
-}
-
 .productCart {
   display: flex;
   flex-direction: row;
@@ -56,14 +52,25 @@
   align-items: center;
 }
 
-.quantity select {
-  border: 1px solid rgb(60, 162, 252);
-  width: 40px;
+.quantityCounter {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   border-radius: 10px;
-  padding: 4px;
+  gap: 7px;
 }
 
-.removeButton button {
+.quantityCounter > button {
+  border-radius: 100px;
+  padding: 5px 10px;
+  border: 1.5px solid rgb(60, 162, 252);
+  background-color: white;
+  object-fit: contain;
+}
+
+.removeButton > button {
   color: white;
   border-radius: 15px;
   padding: 9px;

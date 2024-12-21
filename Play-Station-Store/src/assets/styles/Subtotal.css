@@ -30,17 +30,14 @@
   gap: 10px;
 }
 
-.total h2 {
+.total h2,
+.delivery span {
   color: rgb(88, 198, 88);
 }
 .delivery {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-
-.delivery span {
-  color: rgb(88, 198, 88);
 }
 
 @media (max-width: 886px) {
