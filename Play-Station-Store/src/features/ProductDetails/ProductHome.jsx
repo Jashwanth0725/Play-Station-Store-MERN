@@ -2,8 +2,27 @@ import React from "react";
 import Quantity from "/src/components/QuantityCounter.jsx";
 import "/src/assets/styles/ProductHome.css";
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
+import { useStateValue } from "/src/components/StateProvider.jsx";
 
 function ProductHome({ id, name, image, price, stars, review }) {
+  const [basket, dispatch] = useStateValue();
+
+  console.log("This is the basket >>>", basket);
+
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        name: name,
+        image: image,
+        price: price,
+        stars: stars,
+        review: review,
+      },
+    });
+  };
+
   return (
     <div className="productHome">
       <div className="productImage">
@@ -32,7 +51,9 @@ function ProductHome({ id, name, image, price, stars, review }) {
           <strong>{price}</strong>
         </div>
 
-        <button className="addToCart">Add To Cart</button>
+        <button className="addToCart" onClick={addToBasket}>
+          Add To Cart
+        </button>
         <span className="addMark">
           <VerifiedRoundedIcon />
           <p>Added</p>

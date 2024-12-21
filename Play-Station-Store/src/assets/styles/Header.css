@@ -1,6 +1,8 @@
 .header {
   min-height: 60px;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  /* margin-bottom: 10px; */
   top: 0;
   z-index: 1000;
   display: flex;
@@ -8,6 +10,7 @@
   align-items: center;
   border-bottom: 2px solid rgb(0, 112, 209);
   background-color: white;
+  /* outline: 2px solid rgb(0, 112, 209); */
 }
 
 .eader a:hover {
@@ -16,7 +19,7 @@
 .logo {
   width: auto;
   height: auto;
-  overflow: hidden;
+  /* overflow: visible; */
   margin: 0 20px;
   margin-top: 7px;
 }

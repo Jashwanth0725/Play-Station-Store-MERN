@@ -1,5 +1,6 @@
 .productHome {
-  padding: 15px 25px;
+  /* padding: 15px 25px; */
+
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;

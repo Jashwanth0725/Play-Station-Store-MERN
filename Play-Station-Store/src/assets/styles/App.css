@@ -5,6 +5,8 @@
   flex-direction: column;
   height: 100vh;
   /* background-color: rgb(37, 36, 36); */
+  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 .container {
   flex: 1;

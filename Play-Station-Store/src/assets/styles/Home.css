@@ -1,9 +1,9 @@
 .home {
-  margin-top: 2px;
+  margin-top: 65px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .image {
@@ -21,6 +21,7 @@
   margin-top: 30px;
   padding: 20px;
   display: flex;
+  width: 100%;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
@@ -52,5 +53,6 @@
   justify-content: center;
   justify-content: space-around;
   align-items: center;
+  gap: 50px;
   /* border: 1px solid rgb(60, 162, 252); */
 }
