@@ -8,13 +8,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 2px solid rgb(0, 112, 209);
-  background-color: white;
+  /* border-bottom: 2px solid rgb(0, 112, 209); */
+  /* background-color: white; */
   /* outline: 2px solid rgb(0, 112, 209); */
 }
 
-.eader a:hover {
-  border-bottom: 1px solid rgb(0, 112, 209);
+.header a:hover {
+  /* border-bottom: 1px solid rgb(0, 112, 209); */
+  cursor: pointer;
 }
 .logo {
   width: auto;

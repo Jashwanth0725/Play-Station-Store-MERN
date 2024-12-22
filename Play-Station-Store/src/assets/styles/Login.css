@@ -1,0 +1,85 @@
+.headerLogo {
+  width: auto;
+  height: auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.headerLogo img {
+  width: auto;
+  height: 27px;
+}
+
+.login {
+  /* transform: translateY(-10%); */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-image: url("src/assets/images/PS30TH_4X3_WALLPAPER.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.loginAll {
+  margin-top: 100px;
+}
+
+.login h1 {
+  margin-bottom: 20px;
+  color: rgb(60, 162, 252);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.loginFormLabel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.login input {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid rgb(60, 162, 252);
+}
+
+.login label :focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(60, 162, 252);
+}
+
+.login button {
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  border: 1px solid rgb(60, 162, 252);
+  background-color: rgb(60, 162, 252);
+  width: 150px;
+}
+
+.login button:hover {
+  background-color: rgb(4, 134, 248);
+  cursor: pointer;
+}
+
+.login button:active {
+  background-color: #3e8e41;
+}
+
+.loginFormRegister {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-self: center;
+}

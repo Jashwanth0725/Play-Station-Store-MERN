@@ -12,7 +12,7 @@ function Header() {
     <nav className="header">
       <div className="leftSide">
         <div className="logo">
-          <Link to="./">
+          <Link to="/">
             <img src="../src/assets/images/HeaderLogo.png" alt="logo"></img>
           </Link>
         </div>
@@ -24,11 +24,11 @@ function Header() {
           <SearchIcon className="searchLogo" />
         </div>
 
-        <div className="login">
-          <a href="">Login</a>
+        <div className="loginSybmol">
+          <Link to="/login">Login</Link>
         </div>
         <div className="cartDetails">
-          <Link to="./checkout" className="cart">
+          <Link to="/checkout" className="cart">
             <ShoppingBagOutlinedIcon className="cartIcon" />
             <p>{basket?.length}</p>
           </Link>
