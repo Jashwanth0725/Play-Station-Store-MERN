@@ -5,7 +5,8 @@ import Subtotal from "../components/Subtotal.jsx";
 import { useStateValue } from "../components/StateProvider.jsx";
 
 function Checkout() {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
   return (
     <div className="checkout">
       <div className="leftSubTotal">
@@ -14,7 +15,10 @@ function Checkout() {
 
       <div className="rightCheckout">
         <span>
-          <h2>Your Shopping Cart has {basket.length} Items</h2>
+          <h2>
+            Hello,<p>{user?.email}</p>
+            Your Shopping Cart has {basket.length} Items
+          </h2>
         </span>
 
         <div className="productDisplay">

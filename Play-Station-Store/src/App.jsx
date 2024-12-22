@@ -17,7 +17,7 @@ function App() {
     //will only run once when app component loads
 
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
-      console.log("user is >>", authUser);
+      // console.log("user is >>", authUser);
 
       if (authUser) {
         //user is logged in / already logged in

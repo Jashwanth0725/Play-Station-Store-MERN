@@ -11,7 +11,7 @@ export const discount = (basket) => getBasketTotal(basket) / 10;
 export const totalPrice = (basket) => getBasketTotal(basket) - discount(basket);
 
 const reducer = (state, action) => {
-  console.log(action);
+  // console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
