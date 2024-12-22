@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="home">
       <div className="image">
-        <img src="../src/assets/images/HomeImage4.jpg" alt="img"></img>
+        <img src="/images/HomeImage4.jpg" alt="img"></img>
       </div>
 
       <div className="section">
@@ -27,16 +27,15 @@ function Home() {
       <div className="products">
         <ProductHome
           id={123456}
-          image="../src/assets/images/product1.jpg"
+          image="/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
           stars={5}
           review={27}
         />
-
         <ProductHome
           id={1234567}
-          image="../src/assets/images/product2.png"
+          image="/images/product2.png"
           name="The Last Of Us 2"
           price={3000}
           stars={4}
@@ -44,7 +43,7 @@ function Home() {
         />
         <ProductHome
           id={12345678}
-          image="../src/assets/images/product3.jpg"
+          image="/images/product3.jpg"
           name="Wu Kong"
           price={3000}
           stars={2}
@@ -52,7 +51,7 @@ function Home() {
         />
         <ProductHome
           id={123456789}
-          image="../src/assets/images/product4.jpg"
+          image="/images/product4.jpg"
           name="Play Station"
           price={3000}
           stars={1}
@@ -60,16 +59,15 @@ function Home() {
         />
         <ProductHome
           id={123456}
-          image="../src/assets/images/product1.jpg"
+          image="/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
           stars={5}
           review={27}
         />
-
         <ProductHome
           id={1234567}
-          image="../src/assets/images/product2.png"
+          image="/images/product2.png"
           name="The Last Of Us 2"
           price={3000}
           stars={4}
@@ -77,7 +75,7 @@ function Home() {
         />
         <ProductHome
           id={12345678}
-          image="../src/assets/images/product3.jpg"
+          image="/images/product3.jpg"
           name="Wu Kong"
           price={3000}
           stars={2}
@@ -85,23 +83,23 @@ function Home() {
         />
         <ProductHome
           id={123456789}
-          image="../src/assets/images/product4.jpg"
+          image="/images/product4.jpg"
           name="Play Station"
           price={3000}
           stars={1}
           review={27}
         />
         <ProductHome
-          id={12345678}
-          image="../src/assets/images/product3.jpg"
-          name="Wu Kong"
+          id={123456}
+          image="/images/product1.jpg"
+          name="God Of War: Ragnarok"
           price={3000}
-          stars={2}
+          stars={5}
           review={27}
         />
         <ProductHome
           id={1234567}
-          image="../src/assets/images/product2.png"
+          image="/images/product2.png"
           name="The Last Of Us 2"
           price={3000}
           stars={4}

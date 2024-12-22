@@ -1,13 +1,7 @@
-import HeaderLogo from "../assets/images/HeaderLogo.png";
 import React, { useState } from "react";
 import "../assets/styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  db,
-  auth,
-  registerUser,
-  signInWithEmailAndPassword,
-} from "../firebase";
+import { auth, registerUser, signInWithEmailAndPassword } from "../firebase";
 
 function Login() {
   const navigate = useNavigate();
@@ -51,7 +45,7 @@ function Login() {
         <div className="loginAll">
           <Link to="/">
             <div className="headerLogo">
-              <img src={HeaderLogo} alt="Header Logo" />
+              <img src="/images/HeaderLogo.png" alt="Header Logo" />
             </div>
           </Link>
 
@@ -70,7 +64,7 @@ function Login() {
               <input
                 type="password"
                 name="password"
-                vlaue={password}
+                value={password}
                 onChange={(e) => setnewPassword(e.target.value)}
               />
             </label>

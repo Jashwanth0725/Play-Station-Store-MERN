@@ -1,8 +1,8 @@
 import React from "react";
-import Quantity from "/src/components/QuantityCounter.jsx";
-import "/src/assets/styles/ProductHome.css";
+import Quantity from "../../components/QuantityCounter.jsx";
+import "../../assets/styles/ProductHome.css";
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
-import { useStateValue } from "/src/components/StateProvider.jsx";
+import { useStateValue } from "../../components/StateProvider.jsx";
 
 function ProductHome({ id, name, image, price, stars, review }) {
   const [basket, dispatch] = useStateValue();
@@ -45,13 +45,11 @@ function ProductHome({ id, name, image, price, stars, review }) {
       <div className="productHomeQuantity">
         <Quantity />
       </div>
-
       <div className="add">
         <div className="productPrice">
           <small>₹</small>
           <strong>{price}</strong>
         </div>
-
         <button className="addToCart" onClick={addToBasket}>
           Add To Cart
         </button>
