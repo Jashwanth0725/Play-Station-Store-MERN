@@ -2,7 +2,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"; // For Firestore 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDLwvhOZMIJYfPqo1W7VquWgdNrTQAXbr8",
@@ -34,6 +34,8 @@ const registerUser = (email, password) => {
             console.error("Error registering user:", errorCode, errorMessage);
             throw error;
         });
+
+
 };
 
-export { db, auth, registerUser };
+export { db, auth, registerUser, signInWithEmailAndPassword };

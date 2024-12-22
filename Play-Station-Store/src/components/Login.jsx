@@ -2,7 +2,12 @@ import HeaderLogo from "../assets/images/HeaderLogo.png";
 import React, { useState } from "react";
 import "../assets/styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { db, auth, registerUser } from "../firebase";
+import {
+  db,
+  auth,
+  registerUser,
+  signInWithEmailAndPassword,
+} from "../firebase";
 
 function Login() {
   const navigate = useNavigate();
@@ -12,10 +17,22 @@ function Login() {
 
   const signIn = (e) => {
     e.preventDefault();
-    console.log(email, password);
-    console.log(auth);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // User signed in successfully
+        const user = userCredential.user;
+        console.log("User signed in:", user);
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Error signing in:", errorCode, errorMessage);
+        alert(errorMessage);
+      });
   };
 
+  //Creating New User Email and Password
   const register = (e) => {
     e.preventDefault();
     registerUser(email, password)
