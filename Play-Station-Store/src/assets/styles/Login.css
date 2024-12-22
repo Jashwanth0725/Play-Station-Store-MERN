@@ -20,6 +20,9 @@
   height: 100vh;
 }
 
+.label1 {
+  padding-left: 27px;
+}
 .loginForm {
   display: flex;
   flex-direction: column;
