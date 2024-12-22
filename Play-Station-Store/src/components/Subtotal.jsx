@@ -2,25 +2,31 @@ import React, { useState } from "react";
 import "../assets/styles/Subtotal.css";
 import CurrencyFormat from "../utils/CurrencyFormat.jsx";
 import { useStateValue } from "./StateProvider.jsx";
+import { getBasketTotal, discount, totalPrice } from "../features/reducer.jsx";
 
-function Subtotal({ itemsPrice, discount, totalPrice }) {
+function Subtotal() {
   const [isGift, setIsGift] = useState(false);
   const [deliveryOption, setDeliveryOption] = useState("free");
   const [{ basket }] = useStateValue();
+
   return (
     <div className="subTotal">
       <div className="totalSummary">
         <h3>Total Summary</h3>
         <div className="cal">
-          <p>
-            Items ({basket.length}) : {CurrencyFormat({ price: itemsPrice })}
-          </p>
+          <div>Items ({basket.length}) :</div>
+          <div>
+            {CurrencyFormat({ price: getBasketTotal(basket) })}
+            {/* {console.log("This is the basket ", getBasketTotal(basket))} */}
+          </div>
         </div>
         <div className="shipping">
-          <p>Shipping & Handling : Free</p>
+          <div>Shipping & Handling :</div>
+          <div>Free</div>
         </div>
         <div className="discount">
-          <p>Discount : {CurrencyFormat({ price: discount })}</p>
+          <div>Discount 10% :</div>
+          <div> - {CurrencyFormat({ price: discount(basket) })}</div>
         </div>
         <div className="gift">
           <input
@@ -29,10 +35,14 @@ function Subtotal({ itemsPrice, discount, totalPrice }) {
             onChange={() => setIsGift(!isGift)}
           />
           <p>This order contains gift</p>
-          <p>+20</p>
         </div>
         <div className="total">
-          <h2>Total : {CurrencyFormat({ price: totalPrice })}</h2>
+          <div>
+            <h2>Total :</h2>
+          </div>
+          <div>
+            <h2>{CurrencyFormat({ price: totalPrice(basket) })}</h2>
+          </div>
         </div>
       </div>
       <div className="delivery">

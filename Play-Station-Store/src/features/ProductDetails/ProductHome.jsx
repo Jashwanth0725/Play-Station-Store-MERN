@@ -9,6 +9,7 @@ function ProductHome({ id, name, image, price, stars, review }) {
 
   console.log("This is the basket >>>", basket);
 
+  //Add item to basket
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",

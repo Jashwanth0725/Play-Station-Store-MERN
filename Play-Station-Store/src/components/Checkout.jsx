@@ -18,42 +18,14 @@ function Checkout() {
         </span>
 
         <div className="productDisplay">
-          <ProductCart
-            id={123456}
-            image="../src/assets/images/product1.jpg"
-            name="God Of War: Ragnarok"
-            price={3000}
-          />
-          <ProductCart
-            id={123456}
-            image="../src/assets/images/product1.jpg"
-            name="God Of War: Ragnarok"
-            price={3000}
-          />
-          <ProductCart
-            id={123456}
-            image="../src/assets/images/product1.jpg"
-            name="God Of War: Ragnarok"
-            price={3000}
-          />
-          <ProductCart
-            id={123456}
-            image="../src/assets/images/product1.jpg"
-            name="God Of War: Ragnarok"
-            price={3000}
-          />
-          <ProductCart
-            id={123456}
-            image="../src/assets/images/product1.jpg"
-            name="God Of War: Ragnarok"
-            price={3000}
-          />
-          <ProductCart
-            id={123456}
-            image="../src/assets/images/product1.jpg"
-            name="God Of War: Ragnarok"
-            price={3000}
-          />
+          {basket.map((item) => (
+            <ProductCart
+              id={item.id}
+              image={item.image}
+              name={item.name}
+              price={item.price}
+            />
+          ))}
         </div>
       </div>
     </div>

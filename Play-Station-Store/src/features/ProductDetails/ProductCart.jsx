@@ -1,8 +1,19 @@
 import React from "react";
 import "/src/assets/styles/ProductCart.css";
 import QuantityCounter from "/src/components/QuantityCounter.jsx";
+import { useStateValue } from "/src/components/StateProvider.jsx";
 
 function ProductCart({ id, name, image, price }) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  //Remove item from basket
+  const removeItem = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id,
+    });
+  };
+
   return (
     <div className="productCart">
       <div className="productCartImage">
@@ -29,7 +40,7 @@ function ProductCart({ id, name, image, price }) {
             <button>Save For Later</button>
           </div>
           <div className="removeButton">
-            <button>Remove</button>
+            <button onClick={removeItem}>Remove</button>
           </div>
         </div>
       </div>

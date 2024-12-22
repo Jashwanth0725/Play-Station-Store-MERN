@@ -40,6 +40,16 @@
   gap: 5px;
 }
 
+.cal,
+.shipping,
+.discount,
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+
 @media (max-width: 886px) {
   .subTotal {
     margin-top: 0;
