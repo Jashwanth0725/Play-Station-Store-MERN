@@ -22,9 +22,9 @@ function Checkout() {
         </span>
 
         <div className="productDisplay">
-          {basket.map((item) => (
+          {basket.map((item, index) => (
             <ProductCart
-              key={item.id}
+              key={index}
               id={item.id}
               image={item.image}
               name={item.name}

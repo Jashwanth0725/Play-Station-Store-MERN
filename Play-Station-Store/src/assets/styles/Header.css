@@ -40,7 +40,9 @@
   margin-right: auto;
 }
 .rightSide {
-  width: 200px;
+  width: auto;
+  padding-right: 15px;
+  gap: 15px;
   margin-right: 5px;
   display: flex;
   flex-direction: row;

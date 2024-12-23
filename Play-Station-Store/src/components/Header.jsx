@@ -30,6 +30,7 @@ function Header() {
           {/* <input type='text' placeholder='Search...'></input> */}
           <SearchIcon className="searchLogo" />
         </div>
+        <span>Hello, {!user ? "Guest" : user.email}</span>
 
         <div className="loginSybmol" onClick={handleAuthentication}>
           <Link to={!user && "/login"}>{user ? "SignOut" : "LogIn"}</Link>

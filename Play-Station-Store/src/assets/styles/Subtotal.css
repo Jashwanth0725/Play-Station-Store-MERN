@@ -50,6 +50,20 @@
   gap: 5px;
 }
 
+.proceedToCheckOut {
+  display: flex;
+  justify-content: center;
+}
+
+.proceedToCheckOut > button {
+  color: white;
+  border-radius: 15px;
+  padding: 9px 20px;
+  border: 1px solid rgb(60, 162, 252);
+  background-color: rgb(60, 162, 252);
+  object-fit: contain;
+}
+
 @media (max-width: 886px) {
   .subTotal {
     margin-top: 0;

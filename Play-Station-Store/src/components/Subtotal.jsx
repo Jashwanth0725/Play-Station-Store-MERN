@@ -3,8 +3,10 @@ import "../assets/styles/Subtotal.css";
 import CurrencyFormat from "../utils/CurrencyFormat.jsx";
 import { useStateValue } from "./StateProvider.jsx";
 import { getBasketTotal, discount, totalPrice } from "../features/reducer.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Subtotal() {
+  const navigate = useNavigate();
   const [isGift, setIsGift] = useState(false);
   const [deliveryOption, setDeliveryOption] = useState("free");
   const [{ basket }] = useStateValue();
@@ -43,6 +45,12 @@ function Subtotal() {
           <div>
             <h2>{CurrencyFormat({ price: totalPrice(basket) })}</h2>
           </div>
+        </div>
+        <div className="proceedToCheckOut">
+          <button onClick={(e) => navigate("/payment")}>
+            {" "}
+            Proceed To CheckOut
+          </button>
         </div>
       </div>
       <div className="delivery">

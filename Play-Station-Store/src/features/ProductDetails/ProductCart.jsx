@@ -15,36 +15,38 @@ function ProductCart({ id, name, image, price }) {
   };
 
   return (
-    <div className="productCart">
-      <div className="productCartImage">
-        <img src={image} alt="Product Image"></img>
+    <>
+      <div className="productCart">
+        <div className="productCartImage">
+          <img src={image} alt="Product Image"></img>
+        </div>
+
+        <div className="productCartInfo">
+          <div className="productCartName" data-id={id}>
+            <p>{name}</p>
+          </div>
+
+          <div className="productPriceAndQuantity">
+            <div className="productPrice">
+              <small>₹</small>
+              <strong>{price}</strong>
+            </div>
+
+            <div className="quantity">
+              <QuantityCounter />
+            </div>
+          </div>
+          <div className="productUpdate">
+            <div className="saveForLater">
+              <button>Save For Later</button>
+            </div>
+            <div className="removeButton">
+              <button onClick={removeItem}>Remove</button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="productCartInfo">
-        <div className="productCartName" data-id={id}>
-          <p>{name}</p>
-        </div>
-
-        <div className="productPriceAndQuantity">
-          <div className="productPrice">
-            <small>₹</small>
-            <strong>{price}</strong>
-          </div>
-
-          <div className="quantity">
-            <QuantityCounter />
-          </div>
-        </div>
-        <div className="productUpdate">
-          <div className="saveForLater">
-            <button>Save For Later</button>
-          </div>
-          <div className="removeButton">
-            <button onClick={removeItem}>Remove</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
 
