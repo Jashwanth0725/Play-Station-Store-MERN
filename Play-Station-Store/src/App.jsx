@@ -9,25 +9,6 @@ import Payment from "./components/Payment.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth } from "/src/firebase.js";
 import { useStateValue } from "./components/StateProvider.jsx";
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
-
-async function loadStripeWithRetry() {
-  let stripe;
-  for (let i = 0; i < 3; i++) {
-    try {
-      stripe = await loadStripe(
-        "pk_test_51QZHo6BsL8RGoxmq3BhgN1uwGAYEs1F9WJDz4jJ5UmGA4DopOPjYgRtqeS2eASwMX2HcJ4YTxmbZcPHXFTYhUWnX003aXu806T"
-      );
-      if (stripe) break;
-    } catch (error) {
-      console.error("Failed to load Stripe:", error);
-    }
-  }
-  return stripe;
-}
-
-const promise = loadStripeWithRetry();
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -76,9 +57,8 @@ function App() {
               element={
                 <>
                   <Header />
-                  <Elements stripe={promise}>
-                    <Payment />
-                  </Elements>
+
+                  <Payment />
                 </>
               }
             />

@@ -31,18 +31,15 @@ function Payment() {
 
       <div className="reviewItems">
         <h2>Review Items and Delivery</h2>
-        <ProductCart
-          id={123456}
-          image={"/images/product1.jpg"}
-          name={"God Of War: Ragnarok"}
-          price={3000}
-        />
-        <ProductCart
-          id={123456}
-          image={"/images/product1.jpg"}
-          name={"God Of War: Ragnarok"}
-          price={3000}
-        />
+        {basket.map((item, index) => (
+          <ProductCart
+            key={index}
+            id={item.id}
+            image={item.image}
+            name={item.name}
+            price={item.price}
+          />
+        ))}
       </div>
     </div>
   );
