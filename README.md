@@ -1,4 +1,4 @@
-# PlayStation Store
+# PlayStation Store 🎮
 
 ## Overview
 
@@ -6,17 +6,22 @@ The PlayStation Store is a fully responsive e-commerce web application built usi
 
 
 
-### Project Live Link: https://play-station-store-e6933.web.app/
+### Project Link: https://play-station-store-e6933.web.app/
 
 
 ---
 
-## Features
+## Features 🔥
 
 - **Responsive Design**: Optimized for all screen sizes (mobile, tablet, desktop).
 - **Shopping Cart**: Add products to the cart, update quantities, and remove items.
 - **Authentication**: Secure user authentication with signup/login functionality with Firebase Authentication.
 - **Order Management**: Users can review and manage their orders.
+
+---
+
+### 🚧 Note  
+This project is still under development and is yet to be completed.  
 
 ---
 
