@@ -129,7 +129,6 @@ playstation-store/
 
 ---
 
----
 
 ## Acknowledgments
 
