@@ -4,9 +4,10 @@
 
 The PlayStation Store is a fully responsive e-commerce web application built using the MERN stack (MongoDB, Express.js, React, and Node.js). It allows users to browse and purchase PlayStation-related products with a clean and intuitive user interface.
 
----
+
 
 ## Project Live Link: https://play-station-store-e6933.web.app/
+
 
 ---
 
