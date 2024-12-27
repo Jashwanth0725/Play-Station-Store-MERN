@@ -44,18 +44,18 @@ function ProductHome({ id, name, image, price, stars, review }) {
       </div>
       <div className="productHomeQuantity">
         <Quantity />
-      </div>
-      <div className="add">
         <div className="productPrice">
           <small>₹</small>
           <strong>{price}</strong>
         </div>
+      </div>
+      <div className="add">
         <button className="addToCart" onClick={addToBasket}>
           Add To Cart
         </button>
         <span className="addMark">
           <VerifiedRoundedIcon />
-          <p>Added</p>
+          {/* <p>Added</p> */}
         </span>
       </div>
     </div>

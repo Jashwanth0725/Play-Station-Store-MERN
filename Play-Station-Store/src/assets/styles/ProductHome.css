@@ -1,12 +1,13 @@
 .productHome {
   /* padding: 15px 25px; */
-  margin-top: 30px;
+  margin: 20px 5px;
+  /* margin-top: 30px; */
   display: flex;
   /* justify-content: center; */
   flex-direction: column;
   /* align-items: center; */
 
-  gap: 7px;
+  gap: 10px;
 
   max-width: auto;
   border-radius: 10px;
@@ -77,9 +78,16 @@
 }
 
 .addMark {
-  opacity: 1;
+  opacity: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   color: rgb(88, 198, 88);
+}
+
+.productHomeQuantity {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-around;
 }
