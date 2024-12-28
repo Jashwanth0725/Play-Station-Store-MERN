@@ -18,3 +18,10 @@ a {
 button {
   cursor: pointer;
 }
+input {
+  outline: none; /* Remove black border globally */
+}
+
+input:focus {
+  outline: none; /* Remove focus outline */
+}
