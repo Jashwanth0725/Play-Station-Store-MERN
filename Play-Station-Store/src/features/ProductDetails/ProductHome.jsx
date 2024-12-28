@@ -1,13 +1,12 @@
 import React from "react";
 import Quantity from "../../components/QuantityCounter.jsx";
+import ProductStars from "./ProductStars.jsx";
 import "../../assets/styles/ProductHome.css";
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 import { useStateValue } from "../../components/StateProvider.jsx";
 
 function ProductHome({ id, name, image, price, stars, review }) {
   const [basket, dispatch] = useStateValue();
-
-  // console.log("This is the basket >>>", basket);
 
   //Add item to basket
   const addToBasket = () => {
@@ -33,13 +32,7 @@ function ProductHome({ id, name, image, price, stars, review }) {
         <p>{name}</p>
       </div>
       <div className="productStar">
-        <span className="stars">
-          {Array(stars)
-            .fill()
-            .map((_, i) => (
-              <p key={i}>⭐</p>
-            ))}
-        </span>
+        <ProductStars stars={stars} />
         <span>{review}</span>
       </div>
       <div className="productHomeQuantity">
