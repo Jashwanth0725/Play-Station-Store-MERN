@@ -1,7 +1,7 @@
 import React from "react";
-import "/src/assets/styles/ProductCart.css";
-import QuantityCounter from "/src/components/QuantityCounter.jsx";
-import { useStateValue } from "/src/components/StateProvider.jsx";
+import "../../../../Client/src/assets/styles/ProductCart.css";
+import QuantityCounter from "../../components/QuantityCounter.jsx";
+import { useStateValue } from "../../components/StateProvider.jsx";
 
 function ProductCart({ id, name, image, price }) {
   const [{ basket }, dispatch] = useStateValue();

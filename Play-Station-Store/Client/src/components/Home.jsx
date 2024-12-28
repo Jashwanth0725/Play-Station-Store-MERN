@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "../assets/styles/Home.css";
-
-import ProductHome from "../features/ProductDetails/ProductHome.jsx";
-import image from "/images/HomeImage1.jpg";
+import ProductHome from "../components/ProductDetails/ProductHome.jsx";
 
 function Home() {
   const images = [
-    "images/HomeImage1.jpg",
-    "images/HomeImage2.jpg",
-    "images/HomeImage4.jpg",
+    "Client/public/images/HomeImage1.jpg",
+    "Client/public/images/HomeImage2.jpg",
+    "Client/public/images/HomeImage4.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,7 +43,7 @@ function Home() {
       <div className="products">
         <ProductHome
           id={123456}
-          image="/images/product1.jpg"
+          image="Client/public/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
           stars={4.5}
@@ -53,7 +51,7 @@ function Home() {
         />
         <ProductHome
           id={1234567}
-          image="/images/product2.png"
+          image="Client/public/images/product2.png"
           name="The Last Of Us 2"
           price={3000}
           stars={4.5}
@@ -61,7 +59,7 @@ function Home() {
         />
         <ProductHome
           id={12345678}
-          image="/images/product3.jpg"
+          image="Client/public/images/product3.jpg"
           name="Wu Kong"
           price={3000}
           stars={4}
@@ -69,7 +67,7 @@ function Home() {
         />
         <ProductHome
           id={123456789}
-          image="/images/product4.jpg"
+          image="Client/public/images/product4.jpg"
           name="Play Station"
           price={3000}
           stars={5}
@@ -77,7 +75,7 @@ function Home() {
         />
         <ProductHome
           id={123456}
-          image="/images/product1.jpg"
+          image="Client/public/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
           stars={4}
@@ -85,7 +83,7 @@ function Home() {
         />
         <ProductHome
           id={1234567}
-          image="/images/product2.png"
+          image="Client/public/images/product2.png"
           name="The Last Of Us 2"
           price={3000}
           stars={4.5}
@@ -93,7 +91,7 @@ function Home() {
         />
         <ProductHome
           id={12345678}
-          image="/images/product3.jpg"
+          image="Client/public/images/product3.jpg"
           name="Wu Kong"
           price={3000}
           stars={3}
@@ -101,7 +99,7 @@ function Home() {
         />
         <ProductHome
           id={123456789}
-          image="/images/product4.jpg"
+          image="Client/public/images/product4.jpg"
           name="Play Station"
           price={3000}
           stars={3.5}
@@ -109,7 +107,7 @@ function Home() {
         />
         <ProductHome
           id={123456}
-          image="/images/product1.jpg"
+          image="Client/public/images/product1.jpg"
           name="God Of War: Ragnarok"
           price={3000}
           stars={4}
@@ -117,7 +115,7 @@ function Home() {
         />
         <ProductHome
           id={1234567}
-          image="/images/product2.png"
+          image="Client/public/images/product2.png"
           name="The Last Of Us 2"
           price={3000}
           stars={4.5}

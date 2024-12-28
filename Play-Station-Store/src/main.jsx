@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import "./assets/styles/index.css";
-import App from "../src/App.jsx";
-import { StateProvider } from "./components/StateProvider.jsx";
-import reducer, { initialState } from "./features/reducer.jsx";
+import "../Client/src/assets/styles/index.css";
+import App from "../Client/src/components/App.jsx";
+import { StateProvider } from "../Client/src/components/StateProvider.jsx";
+import reducer, { initialState } from "../Client/src/features/reducer.jsx";
 // import * as serviceWorker from "./serviceWorker.js";
 
 createRoot(document.getElementById("root")).render(

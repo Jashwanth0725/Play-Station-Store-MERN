@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/Checkout.css";
-import ProductCart from "../features/ProductDetails/ProductCart.jsx";
+import ProductCart from "../components/ProductDetails/ProductCart.jsx";
 import Subtotal from "../components/Subtotal.jsx";
 import { useStateValue } from "../components/StateProvider.jsx";
 
@@ -37,7 +37,7 @@ function Checkout() {
                 />
               ))
             ) : (
-              <img src="/images/emptyCart.png" alt="Empty Cart" />
+              <img src="Client/public/images/emptyCart.png" alt="Empty Cart" />
             )}
           </div>
         </div>

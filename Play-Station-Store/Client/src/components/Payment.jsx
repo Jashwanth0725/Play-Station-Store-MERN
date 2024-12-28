@@ -1,6 +1,6 @@
 import React from "react";
 import "../../src/assets/styles/Payment.css";
-import ProductCart from "../../src/features/ProductDetails/ProductCart.jsx";
+import ProductCart from "../components/ProductDetails/ProductCart.jsx";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
 

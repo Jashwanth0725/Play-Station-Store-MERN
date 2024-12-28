@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import "./assets/styles/App.css";
-import Header from "./components/Header.jsx";
-import Home from "./components/Home.jsx";
-import Footer from "./components/Footer.jsx";
-import Checkout from "./components/Checkout.jsx";
-import Login from "./components/Login.jsx";
-import Payment from "./components/Payment.jsx";
+import "../../src/assets/styles/App.css";
+import Header from "./Header.jsx";
+import Home from "./Home.jsx";
+import Footer from "./Footer.jsx";
+import Checkout from "./Checkout.jsx";
+import Login from "./Login.jsx";
+import Payment from "./Payment.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { auth } from "/src/firebase.js";
-import { useStateValue } from "./components/StateProvider.jsx";
+import { auth } from "../features/Auth/firebase.js";
+import { useStateValue } from "./StateProvider.jsx";
 
 function App() {
   const [{}, dispatch] = useStateValue();

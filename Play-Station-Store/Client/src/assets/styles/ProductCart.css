@@ -38,6 +38,7 @@
 
 .productCartName {
   font-size: 1.5em;
+  max-width: 180px;
 }
 
 .productPrice small,

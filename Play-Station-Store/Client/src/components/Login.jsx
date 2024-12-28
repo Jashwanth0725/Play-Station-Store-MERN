@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "../assets/styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, registerUser, signInWithEmailAndPassword } from "../firebase";
+import {
+  auth,
+  registerUser,
+  signInWithEmailAndPassword,
+} from "../features/Auth/firebase";
 
 function Login() {
   const navigate = useNavigate();
@@ -45,7 +49,10 @@ function Login() {
         <div className="loginAll">
           <Link to="/">
             <div className="headerLogo">
-              <img src="/images/HeaderLogo.png" alt="Header Logo" />
+              <img
+                src="Client/public/images/HeaderLogo.png"
+                alt="Header Logo"
+              />
             </div>
           </Link>
 

@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
-import { auth } from "/src/firebase.js";
+import { auth } from "../../../Client/src/features/Auth/firebase.js";
 import ReorderIcon from "@mui/icons-material/Reorder";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
@@ -28,12 +28,15 @@ function Header() {
         <div className="leftSide">
           <div className="logo">
             <Link to="/">
-              <img src="/images/HeaderLogo.png" alt="logo"></img>
+              <img src="Client/public/images/HeaderLogo.png" alt="logo"></img>
             </Link>
           </div>
           <div className="logoMobile">
             <Link to="/">
-              <img src="/images/HeaderLogoMobile.png" alt="logo"></img>
+              <img
+                src="Client/public/images/HeaderLogoMobile.png"
+                alt="logo"
+              ></img>
             </Link>
           </div>
         </div>
@@ -113,7 +116,7 @@ function Header() {
           <div className="mobile">
             <div className="logoSide">
               <Link to="/">
-                <img src="/images/HeaderLogo.png" alt="logo"></img>
+                <img src="Client/public/images/HeaderLogo.png" alt="logo"></img>
               </Link>
 
               <span

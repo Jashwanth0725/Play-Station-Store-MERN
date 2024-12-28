@@ -1,9 +1,9 @@
 import { useState } from "react";
 import React from "react";
-import "/src/assets/styles/QuantityCounter.css";
+import "../../../Client/src/assets/styles/QuantityCounter.css";
 
 function QuantityCounter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   function Increment() {
     setCount((precount) => precount + 1);
