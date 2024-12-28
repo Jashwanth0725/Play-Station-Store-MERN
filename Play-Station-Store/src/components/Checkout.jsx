@@ -9,28 +9,37 @@ function Checkout() {
 
   return (
     <div className="checkout">
-      <div className="leftSubTotal">
-        <Subtotal />
-      </div>
+      <span className="checkoutUser">
+        <h2>
+          <pre>
+            Hello, <span>{user?.email}</span>
+          </pre>
+        </h2>
+        <br></br>
+        <h3>Your Shopping Cart has {basket.length} Items</h3>
+      </span>
 
-      <div className="rightCheckout">
-        <span>
-          <h2>
-            Hello,<p>{user?.email}</p>
-            Your Shopping Cart has {basket.length} Items
-          </h2>
-        </span>
+      <div className="checkoutDetails">
+        <div className="leftSubTotal">
+          <Subtotal />
+        </div>
 
-        <div className="productDisplay">
-          {basket.map((item, index) => (
-            <ProductCart
-              key={index}
-              id={item.id}
-              image={item.image}
-              name={item.name}
-              price={item.price}
-            />
-          ))}
+        <div className="rightCheckout">
+          <div className="productDisplay">
+            {basket && basket.length > 0 ? (
+              basket.map((item, index) => (
+                <ProductCart
+                  key={index}
+                  id={item.id}
+                  image={item.image}
+                  name={item.name}
+                  price={item.price}
+                />
+              ))
+            ) : (
+              <img src="/images/emptyCart.png" alt="Empty Cart" />
+            )}
+          </div>
         </div>
       </div>
     </div>

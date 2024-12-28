@@ -1,13 +1,28 @@
 .checkout {
-  margin-top: 100px;
-  margin-bottom: 10px;
+  margin-top: 90px;
+}
+
+.checkoutUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutUser pre {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.checkoutDetails {
+  margin-top: 20px;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   justify-content: center;
-  /* align-items: center; */
-  gap: 100px;
+  justify-content: space-around;
 }
 
 .productDisplay {
@@ -17,8 +32,9 @@
   align-items: center;
 }
 
-@media (max-width: 892px) {
-  .checkout {
-    gap: 20px;
-  }
+.rightCheckout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
