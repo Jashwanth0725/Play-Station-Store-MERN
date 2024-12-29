@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 
 
 //get jokes
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => {
     const jokes = [
         {
             joke: "joke1"

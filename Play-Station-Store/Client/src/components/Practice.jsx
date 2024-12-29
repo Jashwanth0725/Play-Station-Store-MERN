@@ -7,7 +7,7 @@ function Practice() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/jokes")
+      .get("/api/jokes")
       .then((response) => {
         setJokes(response.data);
         console.log(response.data);
@@ -22,9 +22,9 @@ function Practice() {
       <div className="practice">Practise</div>
 
       <p>Jokes : {jokes.length}</p>
-      {jokes.map((joke, index) => {
-        <div key={index}>{joke.joke}</div>;
-      })}
+      {jokes.map((joke, index) => (
+        <div key={index}>{joke.joke}</div>
+      ))}
     </>
   );
 }
