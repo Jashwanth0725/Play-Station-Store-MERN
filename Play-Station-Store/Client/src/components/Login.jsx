@@ -49,10 +49,7 @@ function Login() {
         <div className="loginAll">
           <Link to="/">
             <div className="headerLogo">
-              <img
-                src="Client/public/images/HeaderLogo.png"
-                alt="Header Logo"
-              />
+              <img src="/images/HeaderLogo.png" alt="Header Logo" />
             </div>
           </Link>
 

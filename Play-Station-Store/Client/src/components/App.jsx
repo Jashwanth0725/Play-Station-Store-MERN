@@ -6,6 +6,7 @@ import Footer from "./Footer.jsx";
 import Checkout from "./Checkout.jsx";
 import Login from "./Login.jsx";
 import Payment from "./Payment.jsx";
+import Practice from "./Practice.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth } from "../features/Auth/firebase.js";
 import { useStateValue } from "./StateProvider.jsx";
@@ -42,6 +43,16 @@ function App() {
       <div className="app">
         <div className="container">
           <Routes>
+            <Route
+              path="/practice"
+              element={
+                <>
+                  <Header />
+                  <Practice />
+                </>
+              }
+            />
+
             <Route
               path="/checkout"
               element={

@@ -9,6 +9,7 @@ import ReorderIcon from "@mui/icons-material/Reorder";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
+// import {image} from '../images/HeaderLogo.png'
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue(false);
@@ -28,15 +29,16 @@ function Header() {
         <div className="leftSide">
           <div className="logo">
             <Link to="/">
-              <img src="Client/public/images/HeaderLogo.png" alt="logo"></img>
+              <img src="/images/HeaderLogo.png" alt="Logo"></img>
+              {/* Client\src\components\ */}
+
+              {/* src/features/Auth/firebase.js */}
             </Link>
           </div>
+
           <div className="logoMobile">
             <Link to="/">
-              <img
-                src="Client/public/images/HeaderLogoMobile.png"
-                alt="logo"
-              ></img>
+              <img src="/images/HeaderLogoMobile.png" alt="Mobile logo"></img>
             </Link>
           </div>
         </div>
@@ -116,7 +118,7 @@ function Header() {
           <div className="mobile">
             <div className="logoSide">
               <Link to="/">
-                <img src="Client/public/images/HeaderLogo.png" alt="logo"></img>
+                <img src="/images/HeaderLogoMobile.png" alt="logo"></img>
               </Link>
 
               <span

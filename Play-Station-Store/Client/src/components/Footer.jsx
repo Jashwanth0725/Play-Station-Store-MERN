@@ -21,7 +21,7 @@ function Footer() {
         </Link>
       </div>
       <div className="lastLogo">
-        <img src="Client/public/images/FooterLogo.png" alt=" button logo"></img>
+        <img src="/images/FooterLogo.png" alt=" button logo"></img>
         <p>@Copyright 2003</p>
       </div>
     </div>

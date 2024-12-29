@@ -37,7 +37,7 @@ function Checkout() {
                 />
               ))
             ) : (
-              <img src="Client/public/images/emptyCart.png" alt="Empty Cart" />
+              <img src="/images/emptyCart.png" alt="Empty Cart" />
             )}
           </div>
         </div>

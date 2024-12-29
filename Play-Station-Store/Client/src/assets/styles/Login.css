@@ -15,7 +15,7 @@
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  background-image: url("Client/public/images/PS30TH_4X3_WALLPAPER.png");
+  background-image: url("/images/PS30TH_4X3_WALLPAPER.png");
   background-size: cover;
   height: 100vh;
 }
