@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore"; // For Firestore
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDLwvhOZMIJYfPqo1W7VquWgdNrTQAXbr8",
-    authDomain: "play-station-store-e6933.firebaseapp.com",
-    projectId: "play-station-store-e6933",
-    storageBucket: "play-station-store-e6933.firebasestorage.app",
-    messagingSenderId: "394555522070",
-    appId: "1:394555522070:web:0db9216aed401a78b7c937",
-    measurementId: "G-R83W8ELHNX"
+    apiKey: "AIzaSyAjXLGZOmQSES-L3nUX_4gSLjpcc1yT_HY",
+    authDomain: "play-station-store-0725.firebaseapp.com",
+    projectId: "play-station-store-0725",
+    storageBucket: "play-station-store-0725.firebasestorage.app",
+    messagingSenderId: "190561853144",
+    appId: "1:190561853144:web:a0b703273ed6c5726a81ad",
+    measurementId: "G-JZ681CK64P"
 };
 
 // Initialize Firebase
