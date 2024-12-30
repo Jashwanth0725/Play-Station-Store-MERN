@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Quantity from "../../components/QuantityCounter.jsx";
 import ProductStars from "./ProductStars.jsx";
 import "../../../../Client/src/assets/styles/ProductHome.css";
 import "../../../../Client/src/assets/styles/QuantityCounter.css";
-
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 import { useStateValue } from "../../components/StateProvider.jsx";
 

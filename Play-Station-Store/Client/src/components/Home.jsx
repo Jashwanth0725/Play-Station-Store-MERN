@@ -12,11 +12,13 @@ function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    // const interval =
+
+    setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, images);
 
   return (
