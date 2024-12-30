@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../../../../Client/src/assets/styles/ProductCart.css";
 import "../../../../Client/src/assets/styles/QuantityCounter.css";
-
-import QuantityCounter from "../../components/QuantityCounter.jsx";
 import { useStateValue } from "../../components/StateProvider.jsx";
 
 function ProductCart({ id, name, image, price, quantity }) {
@@ -38,12 +36,13 @@ function ProductCart({ id, name, image, price, quantity }) {
   }
 
   function Decrement() {
-    setQuantityCount((precount) => precount - 1);
-    if (quantityCount <= 1) {
-      console.log("Remove Item");
+    if (quantityCount > 1) {
+      setQuantityCount((precount) => precount - 1);
+      decreaseQuantity();
+    } else {
+      console.log("Remove Item from cart");
       removeItem();
     }
-    decreaseQuantity();
   }
 
   return (
@@ -74,7 +73,7 @@ function ProductCart({ id, name, image, price, quantity }) {
           </div>
           <div className="productUpdate">
             <div className="saveForLater">
-              {/* <button>Wish List</button> */}
+              <button>Wish List</button>
             </div>
             <div className="removeButton">
               <button onClick={removeItem}>Remove</button>

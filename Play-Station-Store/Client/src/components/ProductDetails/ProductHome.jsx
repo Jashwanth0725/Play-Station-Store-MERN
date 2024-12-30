@@ -10,7 +10,17 @@ import { useStateValue } from "../../components/StateProvider.jsx";
 function ProductHome({ id, name, image, price, stars, review }) {
   const [basket, dispatch] = useStateValue();
 
+  const [visible, setVisible] = useState(false);
+
   //Add item to basket
+
+  const apper = () => {
+    setVisible(true);
+
+    setTimeout(() => {
+      setVisible(false);
+    }, 3000);
+  };
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -26,6 +36,7 @@ function ProductHome({ id, name, image, price, stars, review }) {
     });
     // console.log(quantity);
     setQuantityCount(1);
+    apper();
   };
 
   const [quantity, setQuantityCount] = useState(1);
@@ -35,7 +46,7 @@ function ProductHome({ id, name, image, price, stars, review }) {
   }
 
   function Decrement() {
-    if (count === 0) console.log("Remove Item");
+    // if (count === 0) console.log("Remove Item");
     setQuantityCount((precount) => precount - 1);
   }
   return (
@@ -70,10 +81,12 @@ function ProductHome({ id, name, image, price, stars, review }) {
         <button className="addToCart" onClick={addToBasket}>
           Add To Cart
         </button>
-        <span className="addMark">
-          <VerifiedRoundedIcon />
-          {/* <p>Added</p> */}
-        </span>
+        {visible && (
+          <span className="addMark">
+            <VerifiedRoundedIcon />
+            {/* <p>Added</p> */}
+          </span>
+        )}
       </div>
     </div>
   );

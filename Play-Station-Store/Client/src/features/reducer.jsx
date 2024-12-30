@@ -4,11 +4,19 @@ export const initialState = {
 };
 
 export const getBasketTotal = (basket) =>
-  basket?.reduce((amount, item) => item.price + amount, 0);
+  basket?.reduce((amount, item) => item.price * item.quantity + amount, 0);
 
 export const discount = (basket) => getBasketTotal(basket) / 10;
 
 export const totalPrice = (basket) => getBasketTotal(basket) - discount(basket);
+
+export const quantityCount = (basket) => {
+  let count = 0;
+  basket.forEach((item) => {
+    count += item.quantity;
+  });
+  return count;
+};
 
 const reducer = (state, action) => {
   // console.log(action);
@@ -19,16 +27,20 @@ const reducer = (state, action) => {
       );
 
       let updatedBasket = [...state.basket];
-
-      if (productIndex >= 0) {
-        // Update the quantity if the item exists
-        updatedBasket[productIndex] = {
-          ...updatedBasket[productIndex],
-          quantity: updatedBasket[productIndex].quantity + action.item.quantity,
-        };
+      if (action.item.quantity > 0) {
+        if (productIndex >= 0) {
+          // Update the quantity if the item exists
+          updatedBasket[productIndex] = {
+            ...updatedBasket[productIndex],
+            quantity:
+              updatedBasket[productIndex].quantity + action.item.quantity,
+          };
+        } else {
+          // Add the item if it doesn't exist
+          updatedBasket.push(action.item);
+        }
       } else {
-        // Add the item if it doesn't exist
-        updatedBasket.push(action.item);
+        console.warn("Adding to cart cannot be done as qunatity is < 1");
       }
 
       return {
@@ -37,20 +49,25 @@ const reducer = (state, action) => {
       };
 
     case "REMOVE_FROM_BASKET":
-      const index = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
-      );
-      let newBasket = [...state.basket];
-      if (index >= 0) {
-        newBasket.splice(index, 1);
-      } else {
-        console.warn(
-          `Can't remove product (id: ${action.id}) as its not in basket!`
-        );
-      }
+      // const index = state.basket.findIndex(
+      //   (basketItem) => basketItem.id === action.id
+      // );
+      // let newBasket = [...state.basket];
+      // if (index >= 0) {
+      //   newBasket.splice(index, 1);
+      // } else {
+      //   console.warn(
+      //     `Can't remove product (id: ${action.id}) as its not in basket!`
+      //   );
+      // }
       return {
+        // ...state,
+        // basket: newBasket,
+
         ...state,
-        basket: newBasket,
+        basket: state.basket.filter(
+          (basketItem) => basketItem.id !== action.id
+        ),
       };
 
     case "INCREASE_QUANTITY":
@@ -79,12 +96,21 @@ const reducer = (state, action) => {
       const indexDecreaseQuantity = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
+
       let newBasketDecrease = [...state.basket];
+
       if (indexDecreaseQuantity >= 0) {
-        newBasketDecrease[indexDecreaseQuantity] = {
-          ...newBasketDecrease[indexDecreaseQuantity],
-          quantity: newBasketDecrease[indexDecreaseQuantity].quantity - 1,
-        };
+        const currentQuantity =
+          newBasketDecrease[indexDecreaseQuantity].quantity;
+
+        if (currentQuantity > 1) {
+          newBasketDecrease[indexDecreaseQuantity] = {
+            ...newBasketDecrease[indexDecreaseQuantity],
+            quantity: currentQuantity - 1,
+          };
+        } else {
+          newBasketDecrease.splice(indexDecreaseQuantity, 1);
+        }
       } else {
         console.warn(
           `Can't update quantity of product (id: ${action.id}) as its not in basket!`

@@ -3,6 +3,8 @@ import "../../src/assets/styles/Payment.css";
 import ProductCart from "../components/ProductDetails/ProductCart.jsx";
 import { useStateValue } from "./StateProvider";
 import { Link } from "react-router-dom";
+// import { quantityCount } from "../features/reducer.jsx";
+import { quantityCount } from "../features/reducer.jsx";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -10,7 +12,7 @@ function Payment() {
     <div className="paymentPage">
       <Link to="/checkout">
         <div className="checkoutHeader">
-          <h2>Check Out ({basket.length} items)</h2>
+          <h2>Check Out ({quantityCount(basket)} items)</h2>
         </div>
       </Link>
 
@@ -38,6 +40,7 @@ function Payment() {
             image={item.image}
             name={item.name}
             price={item.price}
+            quantity={item.quantity}
           />
         ))}
       </div>

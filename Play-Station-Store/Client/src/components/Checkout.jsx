@@ -3,17 +3,10 @@ import "../assets/styles/Checkout.css";
 import ProductCart from "../components/ProductDetails/ProductCart.jsx";
 import Subtotal from "../components/Subtotal.jsx";
 import { useStateValue } from "../components/StateProvider.jsx";
+import { quantityCount } from "../features/reducer.jsx";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
-
-  const quantityCount = () => {
-    let count = 0;
-    basket.forEach((item) => {
-      count += item.quantity;
-    });
-    return count;
-  };
 
   return (
     <div className="checkout">
@@ -24,7 +17,7 @@ function Checkout() {
           </pre>
         </h2>
         <br></br>
-        <h3>Your Shopping Cart has {quantityCount()} Items</h3>
+        <h3>Your Shopping Cart has {quantityCount(basket)} Items</h3>
       </span>
 
       <div className="checkoutDetails">

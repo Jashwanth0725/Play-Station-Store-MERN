@@ -4,6 +4,7 @@ import CurrencyFormat from "../utils/CurrencyFormat.jsx";
 import { useStateValue } from "./StateProvider.jsx";
 import { getBasketTotal, discount, totalPrice } from "../features/reducer.jsx";
 import { useNavigate } from "react-router-dom";
+import { quantityCount } from "../features/reducer.jsx";
 
 function Subtotal() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Subtotal() {
       <div className="totalSummary">
         <h3>Total Summary</h3>
         <div className="cal">
-          <div>Items ({basket.length}) :</div>
+          <div>Items ({quantityCount(basket)}) :</div>
           <div>
             {CurrencyFormat({ price: getBasketTotal(basket) })}
             {/* {console.log("This is the basket ", getBasketTotal(basket))} */}
@@ -53,7 +54,7 @@ function Subtotal() {
           </button>
         </div>
       </div>
-      <div className="delivery">
+      {/* <div className="delivery">
         <h3>
           Delivery Date: <span>Monday 27, Jul</span>
         </h3>
@@ -87,7 +88,7 @@ function Subtotal() {
             <p>Express Fast Delivery +150</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

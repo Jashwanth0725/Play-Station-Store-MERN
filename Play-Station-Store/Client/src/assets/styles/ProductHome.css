@@ -78,7 +78,7 @@
 }
 
 .addMark {
-  opacity: 0;
+  opacity: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
