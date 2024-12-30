@@ -26,7 +26,7 @@ function Home() {
       </div>
 
       <div className="section">
-        <div className="bestSeller">
+        {/* <div className="bestSeller">
           <a href="">Best Seller</a>
         </div>
         <div className="console">
@@ -37,6 +37,9 @@ function Home() {
         </div>
         <div className="accessories">
           <a href="">Accessories</a>
+        </div> */}
+        <div className="productsList">
+          <span>Products</span>
         </div>
       </div>
 

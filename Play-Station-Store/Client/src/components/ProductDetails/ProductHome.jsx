@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Quantity from "../../components/QuantityCounter.jsx";
 import ProductStars from "./ProductStars.jsx";
 import "../../../../Client/src/assets/styles/ProductHome.css";
+import "../../../../Client/src/assets/styles/QuantityCounter.css";
+
 import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
 import { useStateValue } from "../../components/StateProvider.jsx";
 
@@ -19,11 +21,23 @@ function ProductHome({ id, name, image, price, stars, review }) {
         price: price,
         stars: stars,
         review: review,
-        quantity: 1,
+        quantity: quantity,
       },
     });
+    // console.log(quantity);
+    setQuantityCount(1);
   };
 
+  const [quantity, setQuantityCount] = useState(1);
+
+  function Increment() {
+    setQuantityCount((precount) => precount + 1);
+  }
+
+  function Decrement() {
+    if (count === 0) console.log("Remove Item");
+    setQuantityCount((precount) => precount - 1);
+  }
   return (
     <div className="productHome">
       <div className="productImage">
@@ -40,7 +54,11 @@ function ProductHome({ id, name, image, price, stars, review }) {
       </div>
 
       <div className="productHomeQuantity">
-        <Quantity />
+        <div className="quantityCounter">
+          <button onClick={Decrement}>-</button>
+          <span>{quantity}</span>
+          <button onClick={Increment}>+</button>
+        </div>
 
         <div className="productPrice">
           <small>₹</small>

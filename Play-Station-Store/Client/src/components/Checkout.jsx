@@ -7,6 +7,14 @@ import { useStateValue } from "../components/StateProvider.jsx";
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
 
+  const quantityCount = () => {
+    let count = 0;
+    basket.forEach((item) => {
+      count += item.quantity;
+    });
+    return count;
+  };
+
   return (
     <div className="checkout">
       <span className="checkoutUser">
@@ -16,7 +24,7 @@ function Checkout() {
           </pre>
         </h2>
         <br></br>
-        <h3>Your Shopping Cart has {basket.length} Items</h3>
+        <h3>Your Shopping Cart has {quantityCount()} Items</h3>
       </span>
 
       <div className="checkoutDetails">
@@ -34,6 +42,7 @@ function Checkout() {
                   image={item.image}
                   name={item.name}
                   price={item.price}
+                  quantity={item.quantity}
                 />
               ))
             ) : (

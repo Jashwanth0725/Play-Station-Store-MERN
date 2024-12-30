@@ -25,6 +25,7 @@
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
+  /* justify-content: flex-start; */
   justify-content: space-evenly;
   /* justify-content: center; */
   /* z-index: 1; */
@@ -33,13 +34,15 @@
 .bestSeller a,
 .games a,
 .console a,
-.accessories a {
-  padding: 10px;
+.accessories a,
+.productsList span {
+  padding: 10px 50px;
   border-radius: 20px;
   font-style: italic;
 }
 
-.bestSeller a {
+.bestSeller a,
+.productsList span {
   background-color: rgb(60, 162, 252);
   color: white;
   display: flex;

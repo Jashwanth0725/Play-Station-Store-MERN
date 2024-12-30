@@ -10,17 +10,10 @@ app.get('/', (req, res) => {
 //get jokes
 app.get('/api/jokes', (req, res) => {
     const jokes = [
-        {
-            joke: "joke1"
-        },
-        {
-            joke: "joke 2"
-        },
-        {
-            joke:
-                "joke 3"
-        }];
-    res.send(jokes);
+        { "joke": "Why did the chicken cross the road?" },
+        { "joke": "Knock, knock. Who’s there?" }
+    ];
+    res.json(jokes);
 })
 
 

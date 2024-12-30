@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../../Client/src/assets/styles/ProductCart.css";
+import "../../../../Client/src/assets/styles/QuantityCounter.css";
+
 import QuantityCounter from "../../components/QuantityCounter.jsx";
 import { useStateValue } from "../../components/StateProvider.jsx";
 
-function ProductCart({ id, name, image, price }) {
+function ProductCart({ id, name, image, price, quantity }) {
   const [{ basket }, dispatch] = useStateValue();
 
   //Remove item from basket
@@ -13,6 +15,36 @@ function ProductCart({ id, name, image, price }) {
       id: id,
     });
   };
+
+  const increaseQuantity = () => {
+    dispatch({
+      type: "INCREASE_QUANTITY",
+      id: id,
+    });
+  };
+
+  const decreaseQuantity = () => {
+    dispatch({
+      type: "DECREASE_QUANTITY",
+      id: id,
+    });
+  };
+
+  const [quantityCount, setQuantityCount] = useState(quantity);
+
+  function Increment() {
+    setQuantityCount((precount) => precount + 1);
+    increaseQuantity();
+  }
+
+  function Decrement() {
+    setQuantityCount((precount) => precount - 1);
+    if (quantityCount <= 1) {
+      console.log("Remove Item");
+      removeItem();
+    }
+    decreaseQuantity();
+  }
 
   return (
     <>
@@ -33,12 +65,16 @@ function ProductCart({ id, name, image, price }) {
             </div>
 
             <div className="quantity">
-              <QuantityCounter />
+              <div className="quantityCounter">
+                <button onClick={Decrement}>-</button>
+                <span>{quantityCount}</span>
+                <button onClick={Increment}>+</button>
+              </div>
             </div>
           </div>
           <div className="productUpdate">
             <div className="saveForLater">
-              <button>Save For Later</button>
+              {/* <button>Wish List</button> */}
             </div>
             <div className="removeButton">
               <button onClick={removeItem}>Remove</button>

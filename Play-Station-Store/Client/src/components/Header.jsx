@@ -20,6 +20,14 @@ function Header() {
     }
   };
 
+  const quantityCount = () => {
+    let count = 0;
+    basket.forEach((item) => {
+      count += item.quantity;
+    });
+    return count;
+  };
+
   const [isVisible, setisVisible] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -44,19 +52,19 @@ function Header() {
         </div>
 
         <div className="middle">
-          <div className="searchInput searchInputWeb">
+          {/* <div className="searchInput searchInputWeb">
             <input type="text" placeholder="Search.."></input>
-          </div>
+          </div> */}
         </div>
 
         <div className="rightSide">
-          {visible && (
+          {/* {visible && (
             <div className="searchInput searchInputMobile">
               <input type="text" placeholder="Search.."></input>
             </div>
-          )}
+          )} */}
 
-          <div
+          {/* <div
             className="search"
             onClick={() => {
               if (visible) {
@@ -66,16 +74,16 @@ function Header() {
               }
             }}
           >
-            {/* <input type='text' placeholder='Search...'></input> */}
+            <input type="text" placeholder="Search..."></input>
             <SearchIcon />
-          </div>
+          </div> */}
 
           <div className="profile">
-            <span>
+            {/* <span>
               <Link to="profile">
                 <AccountCircleIcon />
               </Link>
-            </span>
+            </span> */}
 
             <span className="userName">
               Hello, {!user ? "Guest" : user.email}
@@ -85,16 +93,16 @@ function Header() {
           <div className="loginWeb" onClick={handleAuthentication}>
             <Link to={!user && "/login"}>{user ? "SignOut" : "LogIn"}</Link>
           </div>
-          <div className="wishList">
+          {/* <div className="wishList">
             <Link to="wishList">
               <FavoriteBorderRoundedIcon />
             </Link>
-          </div>
+          </div> */}
 
           <div className="cartDetails">
             <Link to="/checkout" className="cart">
               <ShoppingBagOutlinedIcon fontSize="small" />
-              <p>{basket?.length}</p>
+              <p>{quantityCount()}</p>
             </Link>
           </div>
 
@@ -133,17 +141,17 @@ function Header() {
 
             <span>Hello, {!user ? "Guest" : user.email}</span>
 
-            <span>
+            {/* <span>
               <Link to="profile">
                 <p>Profile</p>
               </Link>
-            </span>
+            </span> */}
 
-            <Link to="/WishList">
+            {/* <Link to="/WishList">
               <span className="wishlistMobile">
                 <p>WishList</p>
               </span>
-            </Link>
+            </Link> */}
             <span className="cartDetailsMobile">
               <Link to="/checkout" className="cart">
                 <p>Cart</p>

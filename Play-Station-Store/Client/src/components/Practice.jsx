@@ -5,15 +5,37 @@ import axios from "axios";
 function Practice() {
   const [jokes, setJokes] = useState([]);
 
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/jokes")
+  //     .then((response) => {
+  //       setJokes(response.data);
+  //       console.log("Api response:", response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
+
   useEffect(() => {
     axios
-      .get("/api/jokes")
+      .get("http://localhost:5000/api/jokes")
       .then((response) => {
-        setJokes(response.data);
-        console.log(response.data);
+        const data = response.data;
+        console.log("API Data:", data);
+
+        // Ensure jokes is an array
+        if (Array.isArray(data)) {
+          setJokes(data);
+        } else if (data.jokes && Array.isArray(data.jokes)) {
+          setJokes(data.jokes);
+        } else {
+          setJokes([]); // Default to an empty array
+        }
       })
       .catch((error) => {
-        console.log(error);
+        console.error("API Fetch Error:", error);
+        setJokes([]); // Fallback to empty array on error
       });
   }, []);
 
@@ -22,8 +44,8 @@ function Practice() {
       <div className="practice">Practise</div>
 
       <p>Jokes : {jokes.length}</p>
-      {jokes.map((joke, index) => (
-        <div key={index}>{joke.joke}</div>
+      {jokes.map((item, index) => (
+        <div key={index}>{item.joke}</div>
       ))}
     </>
   );
