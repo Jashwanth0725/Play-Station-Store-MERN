@@ -1,6 +1,20 @@
 import express from 'express';
+import cors from 'cors';
+import Stripe from 'stripe';
+import connectDB from './DataBase/index.js';
+import dotenv from 'dotenv';
+
+dotenv.config()
+
+connectDB({
+    path: './.env'
+});
+
+const stripe = new Stripe(`${process.env.STRIPE_KEY}`)
 
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Server is ready');
@@ -17,8 +31,42 @@ app.get('/api/jokes', (req, res) => {
 })
 
 
+app.post('/payment', async (req, res) => {
 
-const port = process.env.PORT || 5000;
+    const product = await stripe.products.create({
+        name: "T-Shirt"
+
+    })
+
+    if (product) {
+        var price = await stripe.prices.create({
+            product: `${product.id}`,
+            unit_amount: 100 * 100,
+            currency: 'inr',
+
+        });
+    }
+
+    if (price.id) {
+        var session = await stripe.checkout.sessions.create({
+            line_items: [{
+                price: `${price.id}`,
+                quantity: 1,
+
+            }],
+            mode: 'payment',
+            success_url: 'http://localhost:5000/success',
+            cancel_url: 'http://localhost:5000/cancel',
+            customer_email: 'demo@gmail.com'
+        })
+    }
+
+    res.json(session)
+
+})
+
+
+const port = process.env.PORT;
 
 
 app.listen(port, () => {
