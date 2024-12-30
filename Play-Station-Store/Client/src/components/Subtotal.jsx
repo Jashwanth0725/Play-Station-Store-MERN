@@ -12,6 +12,8 @@ function Subtotal() {
   const [deliveryOption, setDeliveryOption] = useState("free");
   const [{ basket }] = useStateValue();
 
+  const total = CurrencyFormat({ price: totalPrice(basket) });
+
   return (
     <div className="subTotal">
       <div className="totalSummary">
@@ -44,12 +46,11 @@ function Subtotal() {
             <h2>Total :</h2>
           </div>
           <div>
-            <h2>{CurrencyFormat({ price: totalPrice(basket) })}</h2>
+            <h2>{total}</h2>
           </div>
         </div>
         <div className="proceedToCheckOut">
-          <button onClick={(e) => navigate("/payment")}>
-            {" "}
+          <button onClick={(e) => navigate(`/checkout?total=${total}`)}>
             Proceed To CheckOut
           </button>
         </div>

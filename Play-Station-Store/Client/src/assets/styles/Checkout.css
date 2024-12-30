@@ -1,40 +1,41 @@
-.checkout {
-  margin-top: 90px;
-}
-
-.checkoutUser {
+.checkout,
+.checkoutPayment {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+.checkoutHeader {
+  margin-top: 70px;
+  display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 20px;
+  /* background-color: aliceblue; */
 }
 
-.checkoutUser pre {
+.delivery {
+  gap: 10px;
+}
+
+.box1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.checkoutDetails {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* width: 100%; */
   justify-content: space-around;
+  gap: 30px;
 }
 
-.productDisplay {
+.reviewItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.rightCheckout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.checkoutPayment > button {
+  color: white;
+  border-radius: 15px;
+  padding: 9px;
+  border: 1px solid rgb(60, 162, 252);
+  background-color: rgb(60, 162, 252);
+  object-fit: contain;
 }

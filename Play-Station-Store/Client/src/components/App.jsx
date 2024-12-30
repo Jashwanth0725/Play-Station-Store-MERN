@@ -3,9 +3,10 @@ import "../../src/assets/styles/App.css";
 import Header from "./Header.jsx";
 import Home from "./Home.jsx";
 import Footer from "./Footer.jsx";
-import Checkout from "./Checkout.jsx";
+import Basket from "./Basket.jsx";
 import Login from "./Login.jsx";
 import Payment from "./Payment.jsx";
+import Checkout from "./Checkout.jsx";
 import Practice from "./Practice.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth } from "../features/Auth/firebase.js";
@@ -54,6 +55,16 @@ function App() {
             />
 
             <Route
+              path="/basket"
+              element={
+                <>
+                  <Header />
+                  <Basket />
+                </>
+              }
+            />
+            <Route path="/login" element={<Login />} />
+            <Route
               path="/checkout"
               element={
                 <>
@@ -62,13 +73,11 @@ function App() {
                 </>
               }
             />
-            <Route path="/login" element={<Login />} />
             <Route
               path="/payment"
               element={
                 <>
-                  <Header />
-
+                  {/* <Header /> */}
                   <Payment />
                 </>
               }

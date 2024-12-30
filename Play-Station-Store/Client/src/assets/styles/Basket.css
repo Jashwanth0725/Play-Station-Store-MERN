@@ -1,0 +1,40 @@
+.basket {
+  margin-top: 90px;
+}
+
+.basketUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.basketUser pre {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.basketDetails {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.productDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightBasket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

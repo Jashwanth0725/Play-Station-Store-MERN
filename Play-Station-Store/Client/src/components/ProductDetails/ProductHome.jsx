@@ -12,7 +12,7 @@ function ProductHome({ id, name, image, price, stars, review }) {
 
   //Add item to basket
 
-  const apper = () => {
+  const visibleTick = () => {
     setVisible(true);
 
     setTimeout(() => {
@@ -32,9 +32,12 @@ function ProductHome({ id, name, image, price, stars, review }) {
         quantity: quantity,
       },
     });
-    // console.log(quantity);
+
+    //    // Store the updated basket in localStorage
+    // const updatedBasket = [...state.basket, newItem]; // Update basket with the new item
+    // localStorage.setItem("cart", JSON.stringify(updatedBasket));
     setQuantityCount(1);
-    apper();
+    visibleTick();
   };
 
   const [quantity, setQuantityCount] = useState(1);

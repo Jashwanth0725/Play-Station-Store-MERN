@@ -100,7 +100,7 @@ function Header() {
           </div> */}
 
           <div className="cartDetails">
-            <Link to="/checkout" className="cart">
+            <Link to="/basket" className="cart">
               <ShoppingBagOutlinedIcon fontSize="small" />
               <p>{quantityCount()}</p>
             </Link>
@@ -153,7 +153,7 @@ function Header() {
               </span>
             </Link> */}
             <span className="cartDetailsMobile">
-              <Link to="/checkout" className="cart">
+              <Link to="/basket" className="cart">
                 <p>Cart</p>
               </Link>
             </span>

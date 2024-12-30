@@ -1,48 +1,57 @@
 import React from "react";
-import "../assets/styles/Checkout.css";
+import "../../src/assets/styles/Checkout.css";
 import ProductCart from "../components/ProductDetails/ProductCart.jsx";
-import Subtotal from "../components/Subtotal.jsx";
-import { useStateValue } from "../components/StateProvider.jsx";
+import { useStateValue } from "./StateProvider";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { quantityCount } from "../features/reducer.jsx";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
 
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const total = params.get("total");
+  const navigate = useNavigate();
+
   return (
     <div className="checkout">
-      <span className="checkoutUser">
-        <h2>
-          <pre>
-            Hello, <span>{user?.email}</span>
-          </pre>
-        </h2>
-        <br></br>
-        <h3>Your Shopping Cart has {quantityCount(basket)} Items</h3>
-      </span>
+      <div className="checkoutHeader">
+        <h2>Check Out ({quantityCount(basket)} items)</h2>
+      </div>
 
-      <div className="checkoutDetails">
-        <div className="leftSubTotal">
-          <Subtotal />
+      <div className="box1">
+        <div className="delivery">
+          <h2>Delivery Address</h2>
+          <p>{user?.email}</p>
+          <p>Kedarnath, Gaurikund</p>
+          <p>Rudraprayag, Uttarakhand, India</p>
         </div>
+        <div className="checkoutPayment">
+          <h2>Total : {total}</h2>
+          {/* <span className="card">Card</span>
+          <span className="cashOnDelivery">Cash</span> */}
+          <button
+            onClick={(e) => {
+              navigate(`/payment?total=${total}`);
+            }}
+          >
+            Buy Now {total}
+          </button>
+        </div>
+      </div>
 
-        <div className="rightCheckout">
-          <div className="productDisplay">
-            {basket && basket.length > 0 ? (
-              basket.map((item, index) => (
-                <ProductCart
-                  key={index}
-                  id={item.id}
-                  image={item.image}
-                  name={item.name}
-                  price={item.price}
-                  quantity={item.quantity}
-                />
-              ))
-            ) : (
-              <img src="/images/emptyCart.png" alt="Empty Cart" />
-            )}
-          </div>
-        </div>
+      <div className="reviewItems">
+        <h2>Review Items and Delivery</h2>
+        {basket.map((item, index) => (
+          <ProductCart
+            key={index}
+            id={item.id}
+            image={item.image}
+            name={item.name}
+            price={item.price}
+            quantity={item.quantity}
+          />
+        ))}
       </div>
     </div>
   );

@@ -127,6 +127,12 @@ const reducer = (state, action) => {
         user: action.user,
       };
 
+    case "LOAD_CART":
+      return {
+        ...state,
+        basket: action.cart, // Loaded cart from localStorage
+      };
+
     default:
       return state;
   }

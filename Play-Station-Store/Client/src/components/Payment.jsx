@@ -1,48 +1,28 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import "../../src/assets/styles/Payment.css";
-import ProductCart from "../components/ProductDetails/ProductCart.jsx";
-import { useStateValue } from "./StateProvider";
-import { Link } from "react-router-dom";
-// import { quantityCount } from "../features/reducer.jsx";
-import { quantityCount } from "../features/reducer.jsx";
 
 function Payment() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const total = params.get("total");
+
   return (
-    <div className="paymentPage">
-      <Link to="/checkout">
-        <div className="checkoutHeader">
-          <h2>Check Out ({quantityCount(basket)} items)</h2>
+    <div>
+      <div className="totalSummary">
+        <div className="total">
+          <div>
+            <h2>Total :</h2>
+          </div>
+          <div>
+            <h2>{total}</h2>
+          </div>
         </div>
-      </Link>
-
-      <div className="box1">
-        <div className="delivery">
-          <h2>Delivery Date</h2>
-          <p>{user?.email}</p>
-          <p>Kedarnath, Gaurikund</p>
-          <p>Rudraprayag, Uttarakhand, India</p>
+        <div className="proceedToCheckOut">
+          <button onClick={(e) => navigate(`/checkout?total=${total}`)}>
+            Proceed To CheckOut
+          </button>
         </div>
-        <div className="payment">
-          <h2>Payment Method: </h2>
-          <span className="card">Card</span>
-          <span className="cashOnDelivery">Cash</span>
-          <button>Buy Now</button>
-        </div>
-      </div>
-
-      <div className="reviewItems">
-        <h2>Review Items and Delivery</h2>
-        {basket.map((item, index) => (
-          <ProductCart
-            key={index}
-            id={item.id}
-            image={item.image}
-            name={item.name}
-            price={item.price}
-            quantity={item.quantity}
-          />
-        ))}
       </div>
     </div>
   );
