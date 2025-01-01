@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .checkoutHeader {
   margin-top: 70px;
   display: flex;
@@ -12,16 +13,31 @@
   /* background-color: aliceblue; */
 }
 
+.checkoutDetails {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.note {
+  font-size: small;
+  font-style: italic;
+  color: rgb(110, 109, 109);
+  max-width: 250px;
+}
+
 .delivery {
   gap: 10px;
 }
 
 .box1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   /* width: 100%; */
-  justify-content: space-around;
+  /* justify-content: space-around; */
   gap: 30px;
 }
 
@@ -30,6 +46,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.reviewItems > h2 {
+  padding: 10px;
 }
 .checkoutPayment > button {
   color: white;
