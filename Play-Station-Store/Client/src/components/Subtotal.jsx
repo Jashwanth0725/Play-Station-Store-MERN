@@ -10,6 +10,7 @@ function Subtotal() {
   const navigate = useNavigate();
   const [isGift, setIsGift] = useState(false);
   const [deliveryOption, setDeliveryOption] = useState("free");
+  const [color, setColor] = useState({ backgroundColor: "" });
   const [{ basket }, dispatch] = useStateValue();
 
   const total = CurrencyFormat({ price: totalPrice(basket) });
@@ -63,9 +64,12 @@ function Subtotal() {
             onClick={() => {
               {
                 totalSave();
-                basket.length ? navigate("/checkout") : <p>Cart is empty</p>;
+                basket.length
+                  ? navigate("/checkout")
+                  : setColor({ backgroundColor: "rgb(208, 51, 51)" });
               }
             }}
+            style={color}
           >
             {basket.length ? (
               <p>Proceed to Checkout</p>
