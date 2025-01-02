@@ -5,9 +5,9 @@ import Home from "./Home.jsx";
 import Footer from "./Footer.jsx";
 import Basket from "./Basket.jsx";
 import Login from "./Login.jsx";
-import Payment from "./Payment.jsx";
 import Checkout from "./Checkout.jsx";
 import Practice from "./Practice.jsx";
+import Register from "./Register.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth } from "../features/Auth/firebase.js";
 import { useStateValue } from "./StateProvider.jsx";
@@ -64,21 +64,13 @@ function App() {
               }
             />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route
               path="/checkout"
               element={
                 <>
                   <Header />
                   <Checkout />
-                </>
-              }
-            />
-            <Route
-              path="/payment"
-              element={
-                <>
-                  {/* <Header /> */}
-                  <Payment />
                 </>
               }
             />

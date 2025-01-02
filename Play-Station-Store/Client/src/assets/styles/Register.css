@@ -9,46 +9,41 @@
   height: 27px;
 }
 
-.login {
-  /* transform: translateY(-10%); */
+.register {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   background-image: url("/images/PS30TH_4X3_WALLPAPER.png");
   background-size: cover;
   height: 100vh;
 }
 
-.label1 {
-  padding-left: 27px;
-}
-.loginForm {
+.registerForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
+  align-items: flex-end;
+  gap: 10px;
 }
 
-.loginAll {
+.registerAll {
   margin-top: 100px;
 }
 
-.login h1 {
+.register h1 {
   margin-bottom: 20px;
   color: rgb(60, 162, 252);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.loginFormLabel {
+.registerFormLabel {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.login input {
+.register input {
   margin-bottom: 10px;
   padding: 5px 10px;
   width: 200px;
@@ -56,12 +51,12 @@
   border: 1px solid rgb(60, 162, 252);
 }
 
-.login label :focus {
+.register label :focus {
   outline: none;
   box-shadow: 0 0 5px rgb(60, 162, 252);
 }
 
-.login button {
+.register button {
   color: white;
   border-radius: 15px;
   padding: 5px;
@@ -70,27 +65,19 @@
   width: 150px;
 }
 
-.login button:hover {
+.register button:hover {
   background-color: rgb(4, 134, 248);
   cursor: pointer;
 }
 
-.login button:active {
+.register button:active {
   background-color: #3e8e41;
 }
 
-.loginFormRegister {
+.registerFormRegister,
+.registerFormLogin {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-  align-self: center;
-}
-
-.forgotSignIn {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
   justify-content: center;
   align-self: center;
 }

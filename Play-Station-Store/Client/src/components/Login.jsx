@@ -30,19 +30,6 @@ function Login() {
       });
   };
 
-  //Creating New User Email and Password
-  const register = (e) => {
-    e.preventDefault();
-    registerUser(email, password)
-      .then((user) => {
-        // Executes when succesfully created user with email and password
-        if (user) {
-          navigate("/");
-        }
-      })
-      .catch((error) => alert(error.message));
-  };
-
   return (
     <>
       <div className="login">
@@ -58,9 +45,10 @@ function Login() {
               Email :
               <input
                 type="text"
-                name="name"
+                name="email"
                 value={email}
                 onChange={(e) => setnewEmail(e.target.value)}
+                required
               />
             </label>
             <label className="loginFormLabel label2">
@@ -70,19 +58,22 @@ function Login() {
                 name="password"
                 value={password}
                 onChange={(e) => setnewPassword(e.target.value)}
+                required
               />
             </label>
-            <Link to="/forgot-password">
-              <p>Forgot your password?</p>
-            </Link>
-            <button type="submit" onClick={signIn}>
-              Sign in
-            </button>
+
+            <div className="forgotSignIn">
+              <Link to="/forgot-password">
+                <p>Forgot your password?</p>
+              </Link>
+              <button type="submit" onClick={signIn}>
+                Sign in
+              </button>
+            </div>
 
             <div className="loginFormRegister">
-              <p>Don't have an account?</p>
               <Link to="/register">
-                <button onClick={register}>Register</button>
+                <p>Don't have an account? Register</p>
               </Link>
             </div>
           </form>
