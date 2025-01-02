@@ -1,17 +1,17 @@
 import React from "react";
 import "../../src/assets/styles/Checkout.css";
-import ProductCart from "../components/ProductDetails/ProductCart.jsx";
+import ProductCheckout from "../components/ProductDetails/ProductCheckout.jsx";
 import { useStateValue } from "./StateProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { quantityCount } from "../features/reducer.jsx";
 import axios from "axios";
 
 function Checkout() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user, total }, dispatch] = useStateValue();
 
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const total = params.get("total");
+  // const location = useLocation();
+  // const params = new URLSearchParams(location.search);
+  // const total = params.get("total");
   const navigate = useNavigate();
 
   const buyfunction = async () => {
@@ -58,7 +58,7 @@ function Checkout() {
         <div className="reviewItems">
           <h2>Review Items and Delivery</h2>
           {basket.map((item, index) => (
-            <ProductCart
+            <ProductCheckout
               key={index}
               id={item.id}
               image={item.image}

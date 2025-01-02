@@ -1,4 +1,4 @@
-.productCart {
+.productCheckout {
   margin: 10px;
   flex-wrap: wrap;
   display: flex;
@@ -11,28 +11,28 @@
   border: 1px solid rgb(60, 162, 252);
 }
 
-.productCartInfo {
+.productCheckoutInfo {
   margin: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.productCart img {
+.productCheckout img {
   max-width: 100px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 5px 5px 5px gray;
 }
 
-.productCartImage {
-  margin-bottom: 10px;
+.productCheckoutImage {
+  /* margin-bottom: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.productCartName {
+.productCheckoutName {
   font-size: 1em;
   /* max-width: 180px; */
 }
@@ -45,10 +45,10 @@
 .productPriceAndQuantity {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  /* background-color: rgb(60, 162, 252); */
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .productUpdate {
@@ -56,36 +56,22 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 10px;
 }
 
-.saveForLater > button {
+.checkoutProductTotal {
+  border-top: 1px solid black;
+}
+
+/* .saveForLater > button {
   color: white;
   border-radius: 11px;
   padding: 7px;
-  border: 1px solid rgb(60, 162, 252);
-  background-color: rgb(60, 162, 252);
+  /* border: 1px solid rgb(60, 162, 252); */
+/* background-color: rgb(60, 162, 252);
   object-fit: contain;
 }
-.removeButton > button {
-  color: white;
-  border-radius: 11px;
-  padding: 4px 8px;
-  border: 1px solid rgb(60, 162, 252);
-  background-color: rgb(60, 162, 252);
-  object-fit: contain;
-}
-
-/* .removeButton > button {
-  border: 1px solid rgb(219, 23, 23);
-  background-color: rgb(208, 59, 59);
-} */
-.removeButton > button:hover {
-  border: 1px solid rgb(219, 23, 23);
-  background-color: rgb(186, 27, 27);
-}
-
 .saveForLater > button:hover {
   background-color: rgb(53, 139, 214);
-}
+}  */

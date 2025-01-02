@@ -14,12 +14,12 @@ function Home() {
   useEffect(() => {
     // const interval =
 
-    setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
 
-    // return () => clearInterval(interval);
-  }, images);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="home">

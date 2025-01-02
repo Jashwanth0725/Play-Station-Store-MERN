@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../../../Client/src/assets/styles/ProductCart.css";
 import "../../../../Client/src/assets/styles/QuantityCounter.css";
 import { useStateValue } from "../../components/StateProvider.jsx";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function ProductCart({ id, name, image, price, quantity }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -76,7 +77,9 @@ function ProductCart({ id, name, image, price, quantity }) {
               <button>Wish List</button>
             </div>
             <div className="removeButton">
-              <button onClick={removeItem}>Remove</button>
+              <button onClick={removeItem}>
+                <DeleteIcon fontSize="small" />
+              </button>
             </div>
           </div>
         </div>

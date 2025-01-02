@@ -10,9 +10,18 @@ function Subtotal() {
   const navigate = useNavigate();
   const [isGift, setIsGift] = useState(false);
   const [deliveryOption, setDeliveryOption] = useState("free");
-  const [{ basket }] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   const total = CurrencyFormat({ price: totalPrice(basket) });
+
+  const totalSave = () => {
+    dispatch({
+      type: "TOTAL_SAVE",
+      total: total,
+    });
+  };
+
+  // totalSave();
 
   return (
     <div className="subTotal">
@@ -50,8 +59,19 @@ function Subtotal() {
           </div>
         </div>
         <div className="proceedToCheckOut">
-          <button onClick={(e) => navigate(`/checkout?total=${total}`)}>
-            Proceed To CheckOut
+          <button
+            onClick={() => {
+              {
+                totalSave();
+                basket.length ? navigate("/checkout") : <p>Cart is empty</p>;
+              }
+            }}
+          >
+            {basket.length ? (
+              <p>Proceed to Checkout</p>
+            ) : (
+              <p>Cart is empty, Please add Products</p>
+            )}
           </button>
         </div>
       </div>

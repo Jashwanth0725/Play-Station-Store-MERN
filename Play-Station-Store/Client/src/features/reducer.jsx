@@ -133,6 +133,12 @@ const reducer = (state, action) => {
         basket: action.cart, // Loaded cart from localStorage
       };
 
+    case "TOTAL_SAVE":
+      return {
+        ...state,
+        total: action.total,
+      };
+
     default:
       return state;
   }
