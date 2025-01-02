@@ -1,5 +1,3 @@
-
-
 # 🎮 PlayStation Store  
 
 ## 🌟 Overview  
@@ -42,59 +40,6 @@ This project is still under development and is yet to be completed.
 
 ---
 
-## 📦 Installation and Setup  
-
-### Prerequisites  
-- Node.js and npm installed.  
-- MongoDB set up locally or through a cloud provider like MongoDB Atlas.  
-- Firebase CLI installed.  
-
-### Steps  
-
-1. **Clone the Repository**:  
-   ```bash  
-   git clone https://github.com/yourusername/playstation-store.git  
-   cd playstation-store  
-   ```  
-
-2. **Install Dependencies**:  
-   ```bash  
-   npm install  
-   cd client && npm install  
-   ```  
-
-3. **Configure Environment Variables**:  
-   - Create a `.env` file in the root directory.  
-   - Add the following variables:  
-     ```env  
-     MONGO_URI=<Your MongoDB URI>  
-     PORT=5000  
-     JWT_SECRET=<Your Secret Key>  
-     ```  
-
-4. **Run the Application**:  
-   - Backend:  
-     ```bash  
-     npm run server  
-     ```  
-   - Frontend:  
-     ```bash  
-     cd client  
-     npm run dev  
-     ```  
-
-5. **Build for Production**:  
-   - Build the React app:  
-     ```bash  
-     npm run build  
-     ```  
-   - Deploy to Firebase:  
-     ```bash  
-     firebase deploy  
-     ```  
-
----
-
 ## 🗂️ Project Structure  
 
 ```
@@ -115,7 +60,7 @@ playstation-store/
 ## 🚀 Future Enhancements  
 
 - Implement **wishlists** for users.  
-- Enable **reviews and ratings** for products.  
+- Enable **reviews** for products.  
 - Add **multi-language support**.  
 - View a variety of PlayStation products with detailed descriptions.  
 - Quickly find desired products using **search and filtering options**.  
