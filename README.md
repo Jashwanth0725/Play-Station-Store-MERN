@@ -1,5 +1,3 @@
-
-
 # 🎮 PlayStation Store  
 
 ## 🌟 Overview  
