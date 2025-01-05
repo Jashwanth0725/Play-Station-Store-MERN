@@ -9,7 +9,7 @@ import { quantityCount } from "../features/reducer.jsx";
 function Subtotal() {
   const navigate = useNavigate();
   const [isGift, setIsGift] = useState(false);
-  const [deliveryOption, setDeliveryOption] = useState("free");
+  // const [deliveryOption, setDeliveryOption] = useState("free");
   const [color, setColor] = useState({ backgroundColor: "" });
   const [{ basket }, dispatch] = useStateValue();
 
