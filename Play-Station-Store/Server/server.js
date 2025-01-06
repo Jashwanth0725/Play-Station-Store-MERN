@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import Stripe from 'stripe';
-import connectDB from './DataBase/index.js';
+import connectDB from './index.js';
 import dotenv from 'dotenv';
 
 dotenv.config()

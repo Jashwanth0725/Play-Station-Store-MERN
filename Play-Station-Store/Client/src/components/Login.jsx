@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/styles/Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   auth,
   registerUser,
   signInWithEmailAndPassword,
 } from "../features/Auth/firebase";
 
+import ReactGA from "react-ga4";
+
 function Login() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
   const navigate = useNavigate();
 
   const [email, setnewEmail] = useState("");

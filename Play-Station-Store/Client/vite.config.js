@@ -13,4 +13,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ['axios'], // Explicitly include axios for optimization
   },
+  define: {
+    'process.env': {},
+  },
 });

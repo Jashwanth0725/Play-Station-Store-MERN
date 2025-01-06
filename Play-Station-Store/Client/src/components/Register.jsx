@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/styles/Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../features/Auth/firebase";
+import { useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 function Register() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
   const navigate = useNavigate();
 
   const [email, setnewEmail] = useState("");

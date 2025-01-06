@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "../assets/styles/Home.css";
 import ProductHome from "../components/ProductDetails/ProductHome.jsx";
+import { useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
   const images = [
     "/images/HomeImage1.jpg",
     "/images/HomeImage2.jpg",

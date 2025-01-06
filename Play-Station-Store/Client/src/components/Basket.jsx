@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../assets/styles/Basket.css";
 import ProductCart from "./ProductDetails/ProductCart.jsx";
 import Subtotal from "./Subtotal.jsx";
 import { useStateValue } from "./StateProvider.jsx";
 import { quantityCount } from "../features/reducer.jsx";
+import { useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 function Basket() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
   const [{ basket, user }, dispatch] = useStateValue();
 
   return (
