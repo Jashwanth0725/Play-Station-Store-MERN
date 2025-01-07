@@ -14,10 +14,11 @@
   /* border: 1px solid rgb(60, 162, 252); */
 }
 
-.productHome:hover {
+/* .productHome:hover {
   cursor: pointer;
   transform: scale(1.05);
-}
+  box-shadow: 0px 0px 500px rgb(174, 174, 174); 
+}  */
 
 .productHome img {
   max-width: 150px;
@@ -37,6 +38,10 @@
   max-width: 150px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.productName > p:hover {
+  text-decoration: underline;
 }
 
 .productStar,
@@ -77,6 +82,10 @@
   width: 90px;
 }
 
+.addToCart:hover {
+  background-color: rgb(54, 147, 228);
+}
+
 .addMark {
   opacity: 1;
   display: flex;
@@ -87,7 +96,6 @@
 
 .productHomeQuantity {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   justify-content: space-around;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ProductStars from "./ProductStars.jsx";
 import "../../../../Client/src/assets/styles/ProductHome.css";
 import "../../../../Client/src/assets/styles/QuantityCounter.css";
@@ -17,7 +18,7 @@ function ProductHome({ id, name, image, price, stars, review }) {
 
     setTimeout(() => {
       setVisible(false);
-    }, 3000);
+    }, 1000);
   };
   const addToBasket = () => {
     dispatch({
@@ -52,13 +53,15 @@ function ProductHome({ id, name, image, price, stars, review }) {
   }
   return (
     <div className="productHome">
-      <div className="productImage">
-        <img src={image} alt="Product Image"></img>
-      </div>
+      <Link to="">
+        <div className="productImage">
+          <img src={image} alt="Product Image"></img>
+        </div>
 
-      <div className="productName" data-id={id}>
-        <p>{name}</p>
-      </div>
+        <div className="productName" data-id={id}>
+          <p>{name}</p>
+        </div>
+      </Link>
 
       <div className="productStar">
         <ProductStars stars={stars} />

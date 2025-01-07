@@ -66,16 +66,15 @@ function Subtotal() {
                 totalSave();
                 basket.length
                   ? navigate("/checkout")
-                  : setColor({ backgroundColor: "rgb(208, 51, 51)" });
+                  : setColor({
+                      backgroundColor: "rgb(196, 48, 48)",
+                      border: "1px solid red",
+                    });
               }
             }}
             style={color}
           >
-            {basket.length ? (
-              <p>Proceed to Checkout</p>
-            ) : (
-              <p>Cart is empty, Please add Products</p>
-            )}
+            {basket.length ? <p>Proceed to Checkout</p> : <p>Cart is Empty</p>}
           </button>
         </div>
       </div>

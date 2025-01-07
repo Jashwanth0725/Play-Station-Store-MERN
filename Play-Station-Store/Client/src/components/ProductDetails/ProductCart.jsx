@@ -3,6 +3,7 @@ import "../../../../Client/src/assets/styles/ProductCart.css";
 import "../../../../Client/src/assets/styles/QuantityCounter.css";
 import { useStateValue } from "../../components/StateProvider.jsx";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Link } from "react-router-dom";
 
 function ProductCart({ id, name, image, price, quantity }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -54,9 +55,11 @@ function ProductCart({ id, name, image, price, quantity }) {
         </div>
 
         <div className="productCartInfo">
-          <div className="productCartName" data-id={id}>
-            <p>{name}</p>
-          </div>
+          <Link to="">
+            <div className="productCartName" data-id={id}>
+              <p>{name}</p>
+            </div>
+          </Link>
 
           <div className="productPriceAndQuantity">
             <div className="productPrice">

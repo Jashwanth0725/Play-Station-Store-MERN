@@ -46,7 +46,7 @@ function Basket() {
                 />
               ))
             ) : (
-              <img src="/images/emptyCart.png" alt="Empty Cart" />
+              <img src="/images/Empty Cart.png" alt="Empty Cart" />
             )}
           </div>
         </div>

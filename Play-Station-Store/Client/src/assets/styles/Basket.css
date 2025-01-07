@@ -20,7 +20,7 @@
 .basketDetails {
   /* margin-top: 20px; */
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
   /* justify-content: center; */
   justify-content: space-evenly;
@@ -28,7 +28,8 @@
 
 .productDisplay {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
