@@ -28,31 +28,35 @@ function Basket() {
       </span>
 
       <div className="basketDetails">
-        <div className="leftSubTotal">
-          <Subtotal />
-        </div>
+        {basket && basket.length > 0 ? (
+          <>
+            <div className="leftSubTotal">
+              <Subtotal />
+            </div>
 
-        <div className="rightBasket">
-          <div className="productDisplay">
-            {basket && basket.length > 0 ? (
-              basket.map((item, index) => (
-                <ProductCart
-                  key={index}
-                  id={item.id}
-                  image={item.image}
-                  name={item.name}
-                  price={item.price}
-                  quantity={item.quantity}
-                />
-              ))
-            ) : (
-              <img src="/images/Empty Cart.png" alt="Empty Cart" />
-            )}
-          </div>
-        </div>
+            <div className="rightBasket">
+              <div className="productDisplay">
+                {basket.map((item, index) => (
+                  <ProductCart
+                    key={index}
+                    id={item.id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    quantity={item.quantity}
+                  />
+                ))}
+              </div>
+            </div>
+          </>
+        ) : (
+          <img src="/images/Empty Cart.png" alt="Empty Cart" />
+        )}
       </div>
     </div>
   );
 }
 
 export default Basket;
+
+//

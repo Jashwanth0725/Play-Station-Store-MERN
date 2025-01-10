@@ -19,13 +19,17 @@
   /* font-family; */
 }
 .basketDetails {
-  /* margin-top: 20px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  justify-content: space-evenly;
-  /* gap: 50px; */
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.basketDetails > img {
+  height: 300px;
+  width: 300px;
 }
 
 .productDisplay {
@@ -48,8 +52,9 @@
   align-items: center;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1024px) {
   .basketDetails {
-    flex-direction: column;
+    /* flex-direction: column; */
+    gap: 0px;
   }
 }
