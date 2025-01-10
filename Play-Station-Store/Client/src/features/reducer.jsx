@@ -3,13 +3,6 @@ export const initialState = {
   user: null,
 };
 
-export const getBasketTotal = (basket) =>
-  basket?.reduce((amount, item) => item.price * item.quantity + amount, 0);
-
-export const discount = (basket) => getBasketTotal(basket) / 10;
-
-export const totalPrice = (basket) => getBasketTotal(basket) - discount(basket);
-
 export const quantityCount = (basket) => {
   let count = 0;
   basket.forEach((item) => {
@@ -92,34 +85,22 @@ const reducer = (state, action) => {
         basket: newBasketIncrease,
       };
 
-    case "DECREASE_QUANTITY":
-      const indexDecreaseQuantity = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
-      );
+    case "DECREASE_QUANTITY": {
+      const newBasketDecrease = state.basket
+        .map((item) =>
+          item.id === action.id
+            ? item.quantity > 1
+              ? { ...item, quantity: item.quantity - 1 } // Decrease quantity
+              : null // Mark for removal
+            : item
+        )
+        .filter(Boolean); // Remove null items
 
-      let newBasketDecrease = [...state.basket];
-
-      if (indexDecreaseQuantity >= 0) {
-        const currentQuantity =
-          newBasketDecrease[indexDecreaseQuantity].quantity;
-
-        if (currentQuantity > 1) {
-          newBasketDecrease[indexDecreaseQuantity] = {
-            ...newBasketDecrease[indexDecreaseQuantity],
-            quantity: currentQuantity - 1,
-          };
-        } else {
-          newBasketDecrease.splice(indexDecreaseQuantity, 1);
-        }
-      } else {
-        console.warn(
-          `Can't update quantity of product (id: ${action.id}) as its not in basket!`
-        );
-      }
       return {
         ...state,
         basket: newBasketDecrease,
       };
+    }
 
     case "SET_USER":
       return {

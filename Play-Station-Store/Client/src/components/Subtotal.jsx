@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../assets/styles/Subtotal.css";
 import CurrencyFormat from "../utils/CurrencyFormat.jsx";
 import { useStateValue } from "./StateProvider.jsx";
-import { getBasketTotal, discount, totalPrice } from "../features/reducer.jsx";
 import { useNavigate } from "react-router-dom";
 import { quantityCount } from "../features/reducer.jsx";
 
@@ -13,6 +12,10 @@ function Subtotal() {
   const [color, setColor] = useState({ backgroundColor: "" });
   const [{ basket }, dispatch] = useStateValue();
 
+  const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price * item.quantity + amount, 0);
+  const discount = (basket) => getBasketTotal(basket) / 10;
+  const totalPrice = (basket) => getBasketTotal(basket) - discount(basket);
   const total = CurrencyFormat({ price: totalPrice(basket) });
 
   const totalSave = () => {
