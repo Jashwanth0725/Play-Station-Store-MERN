@@ -7,7 +7,8 @@
   gap: 30px;
   /* border: 2px solid rgb(60, 162, 252); */
   border-radius: 10px;
-  width: auto;
+  width: 300px;
+  /* background-color: aliceblue; */
 }
 
 .subTotalHeader {
@@ -28,7 +29,8 @@
 .delivery-options {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  /* justify-content: space-between; */
 }
 
 .total h2,
@@ -49,6 +51,11 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 5px;
+  /* max-width: 00px; */
+}
+
+.discountAmount {
+  color: rgb(218, 8, 8);
 }
 
 .proceedToCheckOut {

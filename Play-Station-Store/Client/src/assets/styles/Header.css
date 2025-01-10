@@ -15,7 +15,7 @@
 }
 
 .header a:hover {
-  border-bottom: 1px solid rgb(0, 112, 209);
+  /* border-bottom: 1px solid rgb(0, 112, 209); */
   cursor: pointer;
 }
 
@@ -107,7 +107,7 @@ input:focus {
   gap: 10px;
   background-color: rgba(226, 232, 237, 0.852);
   border-radius: 10px;
-  height: 100vh;
+  height: 50vh;
   box-shadow: -2px 0 10px gray;
   /* backdrop-filter: blur(50px); */
   /* display: none; */
@@ -130,6 +130,11 @@ input:focus {
 
 .sideList {
   display: none;
+}
+
+.sideList:hover,
+.close:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 850px) {

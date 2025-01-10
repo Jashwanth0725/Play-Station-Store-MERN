@@ -124,7 +124,12 @@ function Header() {
       {isVisible && (
         <>
           <div className="mobile">
-            <div className="logoSide">
+            <div
+              className="logoSide"
+              onClick={() => {
+                setisVisible(false);
+              }}
+            >
               <Link to="/">
                 <img src="/images/HeaderLogoMobile.png" alt="logo"></img>
               </Link>
@@ -152,13 +157,24 @@ function Header() {
                 <p>WishList</p>
               </span>
             </Link> */}
-            <span className="cartDetailsMobile">
+            <span
+              className="cartDetailsMobile"
+              onClick={() => {
+                setisVisible(false);
+              }}
+            >
               <Link to="/basket" className="cart">
                 <p>Cart</p>
               </Link>
             </span>
 
-            <div className="loginMobile" onClick={handleAuthentication}>
+            <div
+              className="loginMobile"
+              onClick={() => {
+                setisVisible(false);
+                handleAuthentication();
+              }}
+            >
               <Link to={!user && "/login"}>{user ? "SignOut" : "LogIn"}</Link>
             </div>
           </div>

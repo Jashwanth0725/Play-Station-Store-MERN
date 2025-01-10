@@ -3,15 +3,11 @@
   margin: 20px 5px;
   /* margin-top: 30px; */
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
-  /* align-items: center; */
-
   gap: 10px;
-
   max-width: auto;
   border-radius: 10px;
-  /* border: 1px solid rgb(60, 162, 252); */
 }
 
 /* .productHome:hover {
@@ -48,7 +44,7 @@
 .stars {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: end;
 }
 

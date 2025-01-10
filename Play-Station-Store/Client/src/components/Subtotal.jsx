@@ -41,16 +41,11 @@ function Subtotal() {
         </div>
         <div className="discount">
           <div>Discount 10% :</div>
-          <div> - {CurrencyFormat({ price: discount(basket) })}</div>
+          <div className="discountAmount">
+            - {CurrencyFormat({ price: discount(basket) })}
+          </div>
         </div>
-        <div className="gift">
-          <input
-            type="checkbox"
-            checked={isGift}
-            onChange={() => setIsGift(!isGift)}
-          />
-          <p>This order contains gift</p>
-        </div>
+
         <div className="total">
           <div>
             <h2>Total :</h2>
@@ -59,6 +54,14 @@ function Subtotal() {
             <h2>{total}</h2>
           </div>
         </div>
+        {/* <div className="gift">
+          <input
+            type="checkbox"
+            checked={isGift}
+            onChange={() => setIsGift(!isGift)}
+          />
+          <p>This order contains gift</p>
+        </div> */}
         <div className="proceedToCheckOut">
           <button
             onClick={() => {

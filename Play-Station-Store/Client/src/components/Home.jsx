@@ -49,7 +49,7 @@ function Home() {
           <a href="">Accessories</a>
         </div> */}
         <div className="productsList">
-          <span>Products</span>
+          <span>Our Products</span>
         </div>
       </div>
 
@@ -58,7 +58,7 @@ function Home() {
           id={123456}
           image="/images/product1.jpg"
           name="God Of War: Ragnarok"
-          price={3000}
+          price={1599}
           stars={4.5}
           review={27}
         />
@@ -66,7 +66,7 @@ function Home() {
           id={1234567}
           image="/images/product2.png"
           name="The Last Of Us 2"
-          price={3000}
+          price={1999}
           stars={4.5}
           review={27}
         />
@@ -74,15 +74,23 @@ function Home() {
           id={12345678}
           image="/images/product3.jpg"
           name="Wu Kong"
-          price={3000}
+          price={2999}
           stars={4}
           review={27}
         />
         <ProductHome
-          id={123456789}
+          id={1234567890}
           image="/images/product4.jpg"
           name="Play Station"
-          price={3000}
+          price={49000}
+          stars={5}
+          review={27}
+        />
+        <ProductHome
+          id={123456789}
+          image="/images/HomeImage1.jpg"
+          name="Play Station"
+          price={45999}
           stars={5}
           review={27}
         />
@@ -90,15 +98,15 @@ function Home() {
           id={123456}
           image="/images/product1.jpg"
           name="God Of War: Ragnarok"
-          price={3000}
-          stars={4}
+          price={1599}
+          stars={4.5}
           review={27}
         />
         <ProductHome
           id={1234567}
           image="/images/product2.png"
           name="The Last Of Us 2"
-          price={3000}
+          price={1999}
           stars={4.5}
           review={27}
         />
@@ -106,31 +114,111 @@ function Home() {
           id={12345678}
           image="/images/product3.jpg"
           name="Wu Kong"
-          price={3000}
-          stars={3}
+          price={2999}
+          stars={4}
+          review={27}
+        />
+        <ProductHome
+          id={1234567890}
+          image="/images/product4.jpg"
+          name="Play Station"
+          price={49000}
+          stars={5}
           review={27}
         />
         <ProductHome
           id={123456789}
-          image="/images/product4.jpg"
+          image="/images/HomeImage1.jpg"
           name="Play Station"
-          price={3000}
-          stars={3.5}
+          price={45999}
+          stars={5}
           review={27}
         />
         <ProductHome
           id={123456}
           image="/images/product1.jpg"
           name="God Of War: Ragnarok"
-          price={3000}
-          stars={4}
+          price={1599}
+          stars={4.5}
           review={27}
         />
         <ProductHome
           id={1234567}
           image="/images/product2.png"
           name="The Last Of Us 2"
-          price={3000}
+          price={1999}
+          stars={4.5}
+          review={27}
+        />
+        <ProductHome
+          id={12345678}
+          image="/images/product3.jpg"
+          name="Wu Kong"
+          price={2999}
+          stars={4}
+          review={27}
+        />
+        <ProductHome
+          id={1234567890}
+          image="/images/product4.jpg"
+          name="Play Station"
+          price={49000}
+          stars={5}
+          review={27}
+        />
+        <ProductHome
+          id={123456789}
+          image="/images/HomeImage1.jpg"
+          name="Play Station"
+          price={45999}
+          stars={5}
+          review={27}
+        />
+        <ProductHome
+          id={123456}
+          image="/images/product1.jpg"
+          name="God Of War: Ragnarok"
+          price={1599}
+          stars={4.5}
+          review={27}
+        />
+        <ProductHome
+          id={1234567}
+          image="/images/product2.png"
+          name="The Last Of Us 2"
+          price={1999}
+          stars={4.5}
+          review={27}
+        />
+        <ProductHome
+          id={12345678}
+          image="/images/product3.jpg"
+          name="Wu Kong"
+          price={2999}
+          stars={4}
+          review={27}
+        />
+        <ProductHome
+          id={1234567890}
+          image="/images/product4.jpg"
+          name="Play Station"
+          price={49000}
+          stars={5}
+          review={27}
+        />
+        <ProductHome
+          id={123456789}
+          image="/images/HomeImage1.jpg"
+          name="Play Station"
+          price={45999}
+          stars={5}
+          review={27}
+        />
+        <ProductHome
+          id={123456}
+          image="/images/product1.jpg"
+          name="God Of War: Ragnarok"
+          price={1599}
           stars={4.5}
           review={27}
         />
