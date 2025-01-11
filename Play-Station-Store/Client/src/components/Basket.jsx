@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
+import ReactGA from "react-ga4";
 import "../assets/styles/Basket.css";
 import ProductCart from "./ProductDetails/ProductCart.jsx";
 import Subtotal from "./Subtotal.jsx";
+import quantityCount from "../utils/QuantityCounter.jsx";
 import { useStateValue } from "./StateProvider.jsx";
-import { quantityCount } from "../features/reducer.jsx";
 import { useLocation } from "react-router-dom";
-import ReactGA from "react-ga4";
 
 function Basket() {
   const location = useLocation();
@@ -50,7 +50,9 @@ function Basket() {
             </div>
           </>
         ) : (
-          <img src="/images/Empty Cart.png" alt="Empty Cart" />
+          <>
+            <img src="/images/Empty Cart.png" alt="Empty Cart" />
+          </>
         )}
       </div>
     </div>
@@ -58,5 +60,3 @@ function Basket() {
 }
 
 export default Basket;
-
-//

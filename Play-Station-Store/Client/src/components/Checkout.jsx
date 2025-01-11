@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import "../../src/assets/styles/Checkout.css";
-import ProductCheckout from "../components/ProductDetails/ProductCheckout.jsx";
-import { useStateValue } from "./StateProvider";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { quantityCount } from "../features/reducer.jsx";
 import axios from "axios";
 import ReactGA from "react-ga4";
+import "../../src/assets/styles/Checkout.css";
+import ProductCheckout from "../components/ProductDetails/ProductCheckout.jsx";
+import quantityCount from "../utils/QuantityCounter.jsx";
+import { useStateValue } from "./StateProvider";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Checkout() {
   const location = useLocation();

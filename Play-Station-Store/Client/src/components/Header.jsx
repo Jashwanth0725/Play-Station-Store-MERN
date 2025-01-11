@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "../assets/styles/Header.css";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import quantityCount from "../utils/QuantityCounter.jsx";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "../../../Client/src/features/Auth/firebase.js";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import ReorderIcon from "@mui/icons-material/Reorder";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CloseTwoToneIcon from "@mui/icons-material/CloseTwoTone";
+import SearchIcon from "@mui/icons-material/Search";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
-// import {image} from '../images/HeaderLogo.png'
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue(false);
@@ -18,14 +18,6 @@ function Header() {
     if (user) {
       auth.signOut();
     }
-  };
-
-  const quantityCount = () => {
-    let count = 0;
-    basket.forEach((item) => {
-      count += item.quantity;
-    });
-    return count;
   };
 
   const [isVisible, setisVisible] = useState(false);

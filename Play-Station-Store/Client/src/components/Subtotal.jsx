@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../assets/styles/Subtotal.css";
 import CurrencyFormat from "../utils/CurrencyFormat.jsx";
+import quantityCount from "../utils/QuantityCounter.jsx";
 import { useStateValue } from "./StateProvider.jsx";
 import { useNavigate } from "react-router-dom";
-import { quantityCount } from "../features/reducer.jsx";
 
 function Subtotal() {
   const navigate = useNavigate();

@@ -3,14 +3,6 @@ export const initialState = {
   user: null,
 };
 
-export const quantityCount = (basket) => {
-  let count = 0;
-  basket.forEach((item) => {
-    count += item.quantity;
-  });
-  return count;
-};
-
 const reducer = (state, action) => {
   // console.log(action);
   switch (action.type) {
